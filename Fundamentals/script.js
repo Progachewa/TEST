@@ -37,33 +37,81 @@
 
 // Estimated time: 60min; Start: 23:00; End: 00:30;
 
-function sumTwoNumbers(input) {
-  let firstNum = Number(input[0]);
-  let secondNum = Number(input[1]);
-  let magicNum = Number(input[2]);
-  let numberCombination = 0;
-  isFound = false;
+// function sumTwoNumbers(input) {
+//   let firstNum = Number(input[0]);
+//   let secondNum = Number(input[1]);
+//   let magicNum = Number(input[2]);
+//   let numberCombination = 0;
+//   isFound = false;
 
-  for (let i = firstNum; i <= secondNum; i++) {
-    for (let e = firstNum; e <= secondNum; e++) {
-      numberCombination++;
-      if (i + e === magicNum) {
-        console.log(
-          `Combination N:${numberCombination} (${i} + ${e}) = ${magicNum}`
-        );
-        isFound = true;
-        break;
-      }
-    }
-    if (isFound) {
-      break;
-    }
-  }
-  if (!isFound) {
-    console.log(
-      `${numberCombination} combinations - neither equals ${magicNum}`
-    );
-  }
-}
+//   for (let i = firstNum; i <= secondNum; i++) {
+//     for (let e = firstNum; e <= secondNum; e++) {
+//       numberCombination++;
+//       if (i + e === magicNum) {
+//         console.log(
+//           `Combination N:${numberCombination} (${i} + ${e}) = ${magicNum}`
+//         );
+//         isFound = true;
+//         break;
+//       }
+//     }
+//     if (isFound) {
+//       break;
+//     }
+//   }
+//   if (!isFound) {
+//     console.log(
+//       `${numberCombination} combinations - neither equals ${magicNum}`
+//     );
+//   }
+// }
 
-sumTwoNumbers(["88", "888", "2000"]);
+// sumTwoNumbers(["88", "888", "2000"]);
+
+// Ани обича да пътува и иска тази година да посети няколко различни дестинации. Като си избере дестинация, ще прецени колко пари ще й трябват, за да отиде до там и ще започне да спестява. Когато е спестила достатъчно, ще може да пътува.
+// Функцията получава масив, като всеки път ще се четат първо дестинацията и минималния бюджет, който ще е нужен за пътуването.
+// След това ще се четат няколко суми, които Ани спестява като работи и когато успее да събере достатъчно за пътуването, ще заминава, като на конзолата трябва да се изпише:
+//  "Going to {дестинацията}!"
+// Когато е посетила всички дестинации, които иска, вместо дестинация ще въведе "End" и програмата ще приключи.
+
+// Estimated time: 60-80min; Start: 10:00; End: 12:30;
+
+// function travelling(input) {
+//   let index = 0;
+//   let destination = input[index];
+//   index++;
+//   let price = Number(input[index]);
+//   index++;
+
+//   while (destination !== "End") {
+//     let allSavings = 0;
+//     while (allSavings < price) {
+//       let saving = Number(input[index]);
+//       index++;
+//       allSavings += saving;
+//     }
+//     console.log(`Going to ${destination}!`);
+//     destination = input[index];
+//     index++;
+//     price = Number(input[index]);
+//     index++;
+//   }
+// }
+
+// travelling([
+//   "Greece",
+//   "1000",
+//   "200",
+//   "200",
+//   "300",
+//   "100",
+//   "150",
+//   "240",
+//   "Spain",
+//   "1200",
+//   "300",
+//   "500",
+//   "193",
+//   "423",
+//   "End",
+// ]);
