@@ -115,3 +115,24 @@
 //   "423",
 //   "End",
 // ]);
+
+//Напишете функция, която получава цяло число n и отпечатва пирамида от числа, като в примерите:
+// 7 -> 1
+//     2 3
+//     4 5 6
+//     7
+
+//Write a function that receives a string and a repeat count n. The function should return a new string (the old one repeated n times).
+function repeat(input) {
+  let txt = input[0];
+  let num = Number(input[1]);
+  let result = "";
+
+  if (num > 0) {
+    for (let i = 0; i < num; i++) {
+      result += txt;
+    }
+    console.log(result);
+  }
+}
+repeat(["abc", "3"]);
