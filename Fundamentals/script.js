@@ -242,16 +242,14 @@
 function sumAndSubtract(numbers) {
   let sumResult = Number("");
   let finalResult = Number("");
-  let lastNumber = Number("");
+  let lastNumber = Number(numbers[2]);
 
   for (let i = 0; i < numbers.length - 1; i++) {
     sumResult += Number(numbers[i]);
   }
-  for (let j = 0; j < numbers.length; j++) {
-    lastNumber = Number(numbers[2]);
-  }
+
   finalResult = sumResult - lastNumber;
   console.log(finalResult);
 }
 
-sumAndSubtract(["42", "58", "100"]);
+sumAndSubtract(["23", "6", "10"]);
