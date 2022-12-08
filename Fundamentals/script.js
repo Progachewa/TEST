@@ -199,24 +199,37 @@
 //•	Otherwise, print -> "Negative"
 //Estimated time: 30min; Start: 11:30; End: 11:50;
 
-function positive(input) {
-  let num1 = Number(input[0]);
-  let num2 = Number(input[1]);
-  let num3 = Number(input[2]);
+// function positive(input) {
+//   let num1 = Number(input[0]);
+//   let num2 = Number(input[1]);
+//   let num3 = Number(input[2]);
 
-  let result = "";
+//   let result = "";
 
-  if (
-    (num1 >= 0 && num2 >= 0 && num3 >= 0) ||
-    (num1 < 0 && num2 < 0 && num3 < 0) ||
-    (num1 < 0 && num2 < 0 && num3 > 0) ||
-    (num1 > 0 && num2 < 0 && num3 < 0) ||
-    (num1 < 0 && num2 > 0 && num3 < 0)
-  ) {
-    result = `Positive`;
-  } else {
-    result = `Negative`;
+//   if (
+//     (num1 >= 0 && num2 >= 0 && num3 >= 0) ||
+//     (num1 < 0 && num2 < 0 && num3 < 0) ||
+//     (num1 < 0 && num2 < 0 && num3 > 0) ||
+//     (num1 > 0 && num2 < 0 && num3 < 0) ||
+//     (num1 < 0 && num2 > 0 && num3 < 0)
+//   ) {
+//     result = `Positive`;
+//   } else {
+//     result = `Negative`;
+//   }
+//   console.log(result);
+// }
+// positive(["-5", "1", "1"]);
+
+//Write a function that receives three integers and prints the smallest number. Use an appropriate name for the function.
+//Estimated time: 10min; Start: 14:00; End: 14:07;
+function min(numbers) {
+  let minNum = Number(numbers[0]);
+  for (let i = 0; i < numbers.length; i++) {
+    if (minNum > numbers[i]) {
+      minNum = numbers[i];
+    }
   }
-  console.log(result);
+  console.log(minNum);
 }
-positive(["-5", "1", "1"]);
+min(["-10", "5", "23", "-15"]);
