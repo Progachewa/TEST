@@ -169,28 +169,54 @@
 // Write a function that receives three parameters – two numbers and an operator (string) – and calculates the result depending on the operator. Operator can be 'multiply', 'divide', 'add' or 'subtract'. Try to solve this task using arrow functions.•	Use a switch statement for the different operators.
 //Estimated time: 20min; Start: 11:00; End: 11:17;
 
-simpleCalculation = (input) => {
+// simpleCalculation = (input) => {
+//   let num1 = Number(input[0]);
+//   let num2 = Number(input[1]);
+//   let operator = input[2];
+
+//   let result = "";
+
+//   switch (operator) {
+//     case "multiply":
+//       result = num1 * num2;
+//       break;
+//     case "divide":
+//       result = num1 / num2;
+//       break;
+//     case "add":
+//       result = num1 + num2;
+//       break;
+//     case "subtract":
+//       result = num1 - num2;
+//       break;
+//   }
+//   console.log(result);
+// };
+
+// simpleCalculation(["50", "13", "subtract"]);
+
+//Write a function, that checks whether the result of the multiplication numOne * numTwo * numThree is positive or negative. Try to do this WITHOUT multiplying the 3 numbers.The input comes as parameters named numOne, numTwo, numThree.•	If the result is positive, print on the console -> "Positive"
+//•	Otherwise, print -> "Negative"
+//Estimated time: 30min; Start: 11:30; End: 11:50;
+
+function positive(input) {
   let num1 = Number(input[0]);
   let num2 = Number(input[1]);
-  let operator = input[2];
+  let num3 = Number(input[2]);
 
   let result = "";
 
-  switch (operator) {
-    case "multiply":
-      result = num1 * num2;
-      break;
-    case "divide":
-      result = num1 / num2;
-      break;
-    case "add":
-      result = num1 + num2;
-      break;
-    case "subtract":
-      result = num1 - num2;
-      break;
+  if (
+    (num1 >= 0 && num2 >= 0 && num3 >= 0) ||
+    (num1 < 0 && num2 < 0 && num3 < 0) ||
+    (num1 < 0 && num2 < 0 && num3 > 0) ||
+    (num1 > 0 && num2 < 0 && num3 < 0) ||
+    (num1 < 0 && num2 > 0 && num3 < 0)
+  ) {
+    result = `Positive`;
+  } else {
+    result = `Negative`;
   }
   console.log(result);
-};
-
-simpleCalculation(["50", "13", "subtract"]);
+}
+positive(["-5", "1", "1"]);
