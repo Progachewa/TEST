@@ -137,7 +137,7 @@
 // }
 // repeat(["abc", "3"]);
 
-// Write a function that calculates the total price of an order and prints it on the console. The function should receive one of the following products: coffee, coke, water, snacks; and a quantity of the product. The prices for a single piece of each product are: 
+// Write a function that calculates the total price of an order and prints it on the console. The function should receive one of the following products: coffee, coke, water, snacks; and a quantity of the product. The prices for a single piece of each product are:
 // •	coffee - 1.50
 // •	water - 1.00
 // •	coke - 1.40
@@ -145,24 +145,52 @@
 // Print the result formatted to the second decimal place.
 //Estimated time: 20min; Start: 10:00; End: 10:15;
 
+// function order(input) {
+//   let product = input[0];
+//   let quantity = Number(input[1]);
 
-function order(input) {
-  let product = input[0];
-  let quantity = Number(input[1]);
+//   let price = 0;
+//   let result = "";
 
-  let price = 0;
+//   for(let i = 0; i < quantity; i++) {
+//     result = (price * quantity).toFixed(2);
+//   switch (product) {
+//     case "coffee": price = 1.50;break;
+//     case "water": price = 1.00;break;
+//     case "coke": price = 1.40;break;
+//     case "snacks": price = 2.00;break;
+//     }
+//   }
+//   console.log(result);
+// }
+
+// order(["water", "3"]);
+
+// Write a function that receives three parameters – two numbers and an operator (string) – and calculates the result depending on the operator. Operator can be 'multiply', 'divide', 'add' or 'subtract'. Try to solve this task using arrow functions.•	Use a switch statement for the different operators.
+//Estimated time: 20min; Start: 11:00; End: 11:17;
+
+simpleCalculation = (input) => {
+  let num1 = Number(input[0]);
+  let num2 = Number(input[1]);
+  let operator = input[2];
+
   let result = "";
 
-  for(let i = 0; i < quantity; i++) {
-    result = (price * quantity).toFixed(2);
-  switch (product) {
-    case "coffee": price = 1.50;break;
-    case "water": price = 1.00;break;
-    case "coke": price = 1.40;break;
-    case "snacks": price = 2.00;break;
-    }
+  switch (operator) {
+    case "multiply":
+      result = num1 * num2;
+      break;
+    case "divide":
+      result = num1 / num2;
+      break;
+    case "add":
+      result = num1 + num2;
+      break;
+    case "subtract":
+      result = num1 - num2;
+      break;
   }
   console.log(result);
-}
+};
 
-order(["water", "3"]);
+simpleCalculation(["50", "13", "subtract"]);
