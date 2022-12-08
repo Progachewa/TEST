@@ -223,13 +223,35 @@
 
 //Write a function that receives three integers and prints the smallest number. Use an appropriate name for the function.
 //Estimated time: 10min; Start: 14:00; End: 14:07;
-function min(numbers) {
-  let minNum = Number(numbers[0]);
-  for (let i = 0; i < numbers.length; i++) {
-    if (minNum > numbers[i]) {
-      minNum = numbers[i];
-    }
+
+// function min(numbers) {
+//   let minNum = Number(numbers[0]);
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (minNum > numbers[i]) {
+//       minNum = numbers[i];
+//     }
+//   }
+//   console.log(minNum);
+// }
+// min(["-10", "5", "23", "-15"]);
+
+// You will receive three integer numbers.
+// Write a function sum() to calculate the sum of the first two integers and a function subtract(), which subtracts the result of the function the sum() and the third integer.
+//Estimated time: 40min; Start: 15:00; End: 15:55;
+
+function sumAndSubtract(numbers) {
+  let sumResult = Number("");
+  let finalResult = Number("");
+  let lastNumber = Number("");
+
+  for (let i = 0; i < numbers.length - 1; i++) {
+    sumResult += Number(numbers[i]);
   }
-  console.log(minNum);
+  for (let j = 0; j < numbers.length; j++) {
+    lastNumber = Number(numbers[2]);
+  }
+  finalResult = sumResult - lastNumber;
+  console.log(finalResult);
 }
-min(["-10", "5", "23", "-15"]);
+
+sumAndSubtract(["42", "58", "100"]);
