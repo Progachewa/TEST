@@ -123,16 +123,46 @@
 //     7
 
 //Write a function that receives a string and a repeat count n. The function should return a new string (the old one repeated n times).
-function repeat(input) {
-  let txt = input[0];
-  let num = Number(input[1]);
+// function repeat(input) {
+//   let txt = input[0];
+//   let num = Number(input[1]);
+//   let result = "";
+
+//   if (num > 0) {
+//     for (let i = 0; i < num; i++) {
+//       result += txt;
+//     }
+//     console.log(result);
+//   }
+// }
+// repeat(["abc", "3"]);
+
+// Write a function that calculates the total price of an order and prints it on the console. The function should receive one of the following products: coffee, coke, water, snacks; and a quantity of the product. The prices for a single piece of each product are: 
+// •	coffee - 1.50
+// •	water - 1.00
+// •	coke - 1.40
+// •	snacks - 2.00
+// Print the result formatted to the second decimal place.
+//Estimated time: 20min; Start: 10:00; End: 10:15;
+
+
+function order(input) {
+  let product = input[0];
+  let quantity = Number(input[1]);
+
+  let price = 0;
   let result = "";
 
-  if (num > 0) {
-    for (let i = 0; i < num; i++) {
-      result += txt;
+  for(let i = 0; i < quantity; i++) {
+    result = (price * quantity).toFixed(2);
+  switch (product) {
+    case "coffee": price = 1.50;break;
+    case "water": price = 1.00;break;
+    case "coke": price = 1.40;break;
+    case "snacks": price = 2.00;break;
     }
-    console.log(result);
   }
+  console.log(result);
 }
-repeat(["abc", "3"]);
+
+order(["water", "3"]);
