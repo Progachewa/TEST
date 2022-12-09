@@ -239,17 +239,31 @@
 // Write a function sum() to calculate the sum of the first two integers and a function subtract(), which subtracts the result of the function the sum() and the third integer.
 //Estimated time: 40min; Start: 15:00; End: 15:55;
 
-function sumAndSubtract(numbers) {
-  let sumResult = Number("");
-  let finalResult = Number("");
-  let lastNumber = Number(numbers[2]);
+// function sumAndSubtract(numbers) {
+//   let sumResult = Number("");
+//   let finalResult = Number("");
+//   let lastNumber = Number(numbers[2]);
 
-  for (let i = 0; i < numbers.length - 1; i++) {
-    sumResult += Number(numbers[i]);
+//   for (let i = 0; i < numbers.length - 1; i++) {
+//     sumResult += Number(numbers[i]);
+//   }
+
+//   finalResult = sumResult - lastNumber;
+//   console.log(finalResult);
+// }
+
+// sumAndSubtract(["23", "6", "10"]);
+
+//Write a function that receives two characters and prints on a single line all the characters in between them according to the ASCII code. Keep in mind that the second character code might be before the first one inside the ASCII table.
+//Estimated time: 30min; Start: 09:10; End: 09:30;
+
+function characters(input) {
+  let start = String(input[0]);
+  let end = String(input[1]);
+
+  for (var i = start.charCodeAt() + 1; i < end.charCodeAt(); i++) {
+    console.log(String.fromCharCode(i));
   }
-
-  finalResult = sumResult - lastNumber;
-  console.log(finalResult);
 }
 
-sumAndSubtract(["23", "6", "10"]);
+characters(["a", "d"]);
