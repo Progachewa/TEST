@@ -257,13 +257,39 @@
 //Write a function that receives two characters and prints on a single line all the characters in between them according to the ASCII code. Keep in mind that the second character code might be before the first one inside the ASCII table.
 //Estimated time: 30min; Start: 09:10; End: 09:30;
 
-function characters(input) {
-  let start = String(input[0]);
-  let end = String(input[1]);
+// function characters(input) {
+//   let start = String(input[0]);
+//   let end = String(input[1]);
 
-  for (var i = start.charCodeAt() + 1; i < end.charCodeAt(); i++) {
-    console.log(String.fromCharCode(i));
+//   for (var i = start.charCodeAt() + 1; i < end.charCodeAt(); i++) {
+//     console.log(String.fromCharCode(i));
+//   }
+// }
+
+// characters(["a", "d"]);
+
+//You will receive a single number. You have to write a function, that returns the sum of all even and all odd digits from that number.
+//Estimated time: 30min; Start: 10:00; End: 10:30;
+
+function sumEvenOdd(input) {
+  let num = input[0];
+  let even = 0;
+  let odd = 0;
+  resultOdd = 0;
+  resultEven = 0;
+
+  for (let i = 0; i < num.length; i++) {
+    let currentNum = Number(num[i]);
+    if (currentNum % 2 === 0) {
+      even = currentNum;
+      resultEven += even;
+    }
+    if (currentNum % 2 !== 0) {
+      odd = currentNum;
+      resultOdd += odd;
+    }
   }
+  console.log(`Odd sum = ${resultOdd}, Even sum = ${resultEven}`);
 }
 
-characters(["a", "d"]);
+sumEvenOdd(["3495892137259234"]);
