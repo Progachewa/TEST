@@ -68,32 +68,69 @@
 //filter();
 //Обикаля елементите от подадения масив и проверява дали отговартя на определено условие, подадено от ф-ция. Създава нов масив само от елементите, които отговарят на условието.
 
-let arr1 = [1, 2, 3, 4];
+// let arr1 = [1, 2, 3, 4];
 
-function isOdd(num) {
-  if (num % 2 !== 0) {
+// function isOdd(num) {
+//   if (num % 2 !== 0) {
+//     return num;
+//   }
+// }
+
+// console.log(arr1.filter(isOdd));
+
+// let arr2 = [18, 23, 29, 35, 40, 17, 43, 36];
+
+// function isOldEnough(age) {
+//   if (age >= 18) {
+//     return age;
+//   }
+// }
+
+// console.log(arr2.filter(isOldEnough));
+
+// let arr3 = ["Ivan", "Peter", "Hristian", "Nikolay"];
+
+// function isLongEnough(word) {
+//   if (word.length >= 5) {
+//     return word;
+//   }
+// }
+
+// console.log(arr3.filter(isLongEnough));
+
+//-----------------------------------------------------------
+//find();
+//Връща 1-вия елемент от масива, който отговаря на определено условие, зададено от ф-ция. В момента, в който срещне елемент, който отговаря на условието - спира да обикаля останалите елементи от масива. Ако нито един елемент не отговаря на условието, връша  - "undefined".
+
+let arr1 = [20, 30, 40, 50, 100, 120, 140, 60];
+
+function isBigNumber(num) {
+  if (num > 100) {
     return num;
   }
 }
 
-console.log(arr1.filter(isOdd));
+console.log(arr1.find(isBigNumber)); //120
 
-let arr2 = [18, 23, 29, 35, 40, 17, 43, 36];
+let arr2 = [
+  { fruits: "apple", quantity: 5 },
+  { fruits: "banana", quantity: 10 },
+  { fruits: "cherries", quantity: 8 },
+];
 
-function isOldEnough(age) {
-  if (age >= 18) {
-    return age;
+function isBanana(fruit) {
+  if (fruit.fruits === "banana") {
+    return fruit;
+  }
+}
+console.log(arr2.find(isBanana));
+
+arr3 = [2, 4, 7];
+
+function isPrimeNumber(nums) {
+  if (nums > 1 && nums % nums === 0) {
+    return nums;
   }
 }
 
-console.log(arr2.filter(isOldEnough));
-
-let arr3 = ["Ivan", "Peter", "Hristian", "Nikolay"];
-
-function isLongEnough(word) {
-  if (word.length >= 5) {
-    return word;
-  }
-}
-
-console.log(arr3.filter(isLongEnough));
+console.log(arr3.find(isPrimeNumber));
