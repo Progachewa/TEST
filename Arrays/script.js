@@ -102,35 +102,69 @@
 //find();
 //Връща 1-вия елемент от масива, който отговаря на определено условие, зададено от ф-ция. В момента, в който срещне елемент, който отговаря на условието - спира да обикаля останалите елементи от масива. Ако нито един елемент не отговаря на условието, връша  - "undefined".
 
-let arr1 = [20, 30, 40, 50, 100, 120, 140, 60];
+// let arr1 = [20, 30, 40, 50, 100, 120, 140, 60];
 
-function isBigNumber(num) {
-  if (num > 100) {
-    return num;
+// function isBigNumber(num) {
+//   if (num > 100) {
+//     return num;
+//   }
+// }
+
+// console.log(arr1.find(isBigNumber)); //120
+
+// let arr2 = [
+//   { fruits: "apple", quantity: 5 },
+//   { fruits: "banana", quantity: 10 },
+//   { fruits: "cherries", quantity: 8 },
+// ];
+
+// function isBanana(fruit) {
+//   if (fruit.fruits === "banana") {
+//     return fruit;
+//   }
+// }
+// console.log(arr2.find(isBanana));
+
+// arr3 = [2, 4, 7];
+
+// function isPrimeNumber(nums) {
+//   if (nums > 1 && nums % nums === 0) {
+//     return nums;
+//   }
+// }
+
+// console.log(arr3.find(isPrimeNumber));
+
+//-----------------------------------------------------------
+//findIndex();
+//Връща първия елемент от масива, който отговаря на дадено условие, зададено от ф-ция. Като връща неговия индекс, а не стойност, т.е. на коя позиция се намира. Ако нито един елемент не отговаря на условието, връша "-1".
+
+let arr1 = [15, 18, 24, 26];
+
+function checkAge(age) {
+  if (age > 18) {
+    return age;
   }
 }
 
-console.log(arr1.find(isBigNumber)); //120
+console.log(arr1.findIndex(checkAge));
 
-let arr2 = [
-  { fruits: "apple", quantity: 5 },
-  { fruits: "banana", quantity: 10 },
-  { fruits: "cherries", quantity: 8 },
-];
+let arr2 = ["Mcdonalds", "KFC", "Subway"];
 
-function isBanana(fruit) {
-  if (fruit.fruits === "banana") {
-    return fruit;
-  }
-}
-console.log(arr2.find(isBanana));
-
-arr3 = [2, 4, 7];
-
-function isPrimeNumber(nums) {
-  if (nums > 1 && nums % nums === 0) {
-    return nums;
+function marketing(names) {
+  if (names === "Subway") {
+    return names;
   }
 }
 
-console.log(arr3.find(isPrimeNumber));
+console.log(arr2.findIndex(marketing));
+
+let arr3 = [{ name: "John" }, { name: "Smith" }, { name: "Jack" }];
+
+function firstName(somename) {
+  if (somename.name === "John") {
+    return somename;
+  }
+}
+
+console.log(arr3.findIndex(firstName));
