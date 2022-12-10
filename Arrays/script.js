@@ -137,34 +137,50 @@
 
 //-----------------------------------------------------------
 //findIndex();
-//Връща първия елемент от масива, който отговаря на дадено условие, зададено от ф-ция. Като връща неговия индекс, а не стойност, т.е. на коя позиция се намира. Ако нито един елемент не отговаря на условието, връша "-1".
+// //Връща първия елемент от масива, който отговаря на дадено условие, зададено от ф-ция. Като връща неговия индекс, а не стойност, т.е. на коя позиция се намира. Ако нито един елемент не отговаря на условието, връша "-1".
 
-let arr1 = [15, 18, 24, 26];
+// let arr1 = [15, 18, 24, 26];
 
-function checkAge(age) {
-  if (age > 18) {
-    return age;
-  }
-}
+// function checkAge(age) {
+//   if (age > 18) {
+//     return age;
+//   }
+// }
 
-console.log(arr1.findIndex(checkAge));
+// console.log(arr1.findIndex(checkAge));
 
-let arr2 = ["Mcdonalds", "KFC", "Subway"];
+// let arr2 = ["Mcdonalds", "KFC", "Subway"];
 
-function marketing(names) {
-  if (names === "Subway") {
-    return names;
-  }
-}
+// function marketing(names) {
+//   if (names === "Subway") {
+//     return names;
+//   }
+// }
 
-console.log(arr2.findIndex(marketing));
+// console.log(arr2.findIndex(marketing));
 
-let arr3 = [{ name: "John" }, { name: "Smith" }, { name: "Jack" }];
+// let arr3 = [{ name: "John" }, { name: "Smith" }, { name: "Jack" }];
 
-function firstName(somename) {
-  if (somename.name === "John") {
-    return somename;
-  }
-}
+// function firstName(somename) {
+//   if (somename.name === "John") {
+//     return somename;
+//   }
+// }
 
-console.log(arr3.findIndex(firstName));
+// console.log(arr3.findIndex(firstName));
+
+//-----------------------------------------------------------
+//indexOf();
+//Връща индекса/позицията, на която се намира оказания от нас елемент. Той може да започне да търси зададената му стойност от определен индекс, ако му го зададем, ако не, ще започне да търси от началото до края на масива. Ако не намери елемент с определената стойност връща "-1";
+
+let arr1 = ["dog", "cat", "mouse"];
+
+console.log(arr1.indexOf("dog"));
+
+let arr2 = ["dogs", "cats", "dogs", "mouses"];
+
+console.log(arr2.indexOf("dogs", 1));
+
+let arr3 = ["elephant", "giraffe", "bison"];
+
+console.log(arr3.indexOf("dogs"));
