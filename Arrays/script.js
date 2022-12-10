@@ -50,16 +50,50 @@
 //fill();
 // Пренаписва елемент/и от масива с определена стойност. Може да се подаде стартова позиция и финална.Ако не се подадат се пренаписват всички елементи с подадената стойност.
 
-let fruits = ["Banana", "Apple", "Strawberry"];
+// let fruits = ["Banana", "Apple", "Strawberry"];
 
-console.log(fruits.fill("kiwi"));
+// console.log(fruits.fill("kiwi"));
 
-let vegetables = ["Cucumber", "Pepper", "Onion"];
+// let vegetables = ["Cucumber", "Pepper", "Onion"];
 
-console.log(vegetables.fill("Carrot", 2, 3)); // "Onion" = "Carrot";
+// console.log(vegetables.fill("Carrot", 2, 3)); // "Onion" = "Carrot";
 
-let stars = Array(5).fill({});
-stars[0].name = "somename";
-stars[1].ages = 25;
+// let stars = Array(5).fill({});
+// stars[0].name = "somename";
+// stars[1].ages = 25;
 
-console.log(stars);
+// console.log(stars);
+
+//-----------------------------------------------------------
+//filter();
+//Обикаля елементите от подадения масив и проверява дали отговартя на определено условие, подадено от ф-ция. Създава нов масив само от елементите, които отговарят на условието.
+
+let arr1 = [1, 2, 3, 4];
+
+function isOdd(num) {
+  if (num % 2 !== 0) {
+    return num;
+  }
+}
+
+console.log(arr1.filter(isOdd));
+
+let arr2 = [18, 23, 29, 35, 40, 17, 43, 36];
+
+function isOldEnough(age) {
+  if (age >= 18) {
+    return age;
+  }
+}
+
+console.log(arr2.filter(isOldEnough));
+
+let arr3 = ["Ivan", "Peter", "Hristian", "Nikolay"];
+
+function isLongEnough(word) {
+  if (word.length >= 5) {
+    return word;
+  }
+}
+
+console.log(arr3.filter(isLongEnough));
