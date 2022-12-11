@@ -226,22 +226,55 @@
 //isArray();
 //Проверява дали обектът е масив. И ако е да връща "true",а ако не връща "false";
 
-let arr1 = [15, 18, 30, 50];
-let check = Array.isArray(arr1);
+// let arr1 = [15, 18, 30, 50];
+// let check = Array.isArray(arr1);
 
-console.log(check);
+// console.log(check);
 
-let arr2 = [
-  { fruit: "apple", price: 1.5 },
-  { fruit: "orange", price: 2.5 },
-  { fruit: "strawberry", price: 3.5 },
-];
+// let arr2 = [
+//   { fruit: "apple", price: 1.5 },
+//   { fruit: "orange", price: 2.5 },
+//   { fruit: "strawberry", price: 3.5 },
+// ];
 
-let fruits = Array.isArray(arr2);
+// let fruits = Array.isArray(arr2);
 
-console.log(fruits);
+// console.log(fruits);
 
-let arr3 = { name: "Hristo", age: 45 };
+// let arr3 = { name: "Hristo", age: 45 };
 
-let checkName = Array.isArray(arr3);
-console.log(checkName);
+// let checkName = Array.isArray(arr3);
+
+// console.log(checkName);
+
+//map();
+//Създава нов масив, с ф-цията, която му е задена, за всеки един елемент от оригиналния масив.
+
+let arr1 = [2, 5, 3];
+let newArr1 = arr1.map(multyply);
+
+function multyply(a) {
+  return a * 2;
+}
+
+console.log(newArr1);
+
+let arr2 = [1, 2, 3];
+
+let newArr2 = arr2.map(plusOne);
+
+function plusOne(b) {
+  return b + 1;
+}
+
+console.log(newArr2);
+
+let arr3 = [4, 2, 5, 10];
+
+let newArr3 = arr3.map(square);
+
+function square(c) {
+  return Math.sqrt(c);
+}
+
+console.log(newArr3);
