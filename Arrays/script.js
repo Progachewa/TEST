@@ -188,36 +188,60 @@
 //-----------------------------------------------------------
 //forEach();
 //Извиква ф-ция за всеки един елемент от масива.
-let nums = [1, 2, 3, 4, 8];
+// let nums = [1, 2, 3, 4, 8];
 
-let sum = 0;
+// let sum = 0;
 
-nums.forEach((a) => {
-  if (typeof a === "number") {
-    sum += a;
-  }
-});
+// nums.forEach((a) => {
+//   if (typeof a === "number") {
+//     sum += a;
+//   }
+// });
 
-console.log(sum);
+// console.log(sum);
 
-let names = ["John", "Smith", "Jack", "Johnat", 5, "Nataly", "Ferro"];
+// let names = ["John", "Smith", "Jack", "Johnat", 5, "Nataly", "Ferro"];
 
-let result = "";
+// let result = "";
 
-names.forEach((b) => {
-  if (typeof b === "string") {
-    result += " " + b;
-  }
-});
+// names.forEach((b) => {
+//   if (typeof b === "string") {
+//     result += " " + b;
+//   }
+// });
 
-console.log(result);
+// console.log(result);
 
-let someNumbers = [1, 2, 3, 4, 5];
-let oddResult = [];
+// let someNumbers = [1, 2, 3, 4, 5];
+// let oddResult = [];
 
-someNumbers.forEach((currentNum) => {
-  if (currentNum % 2 !== 0) {
-    oddResult.push(currentNum);
-  }
-});
-console.log(oddResult);
+// someNumbers.forEach((currentNum) => {
+//   if (currentNum % 2 !== 0) {
+//     oddResult.push(currentNum);
+//   }
+// });
+// console.log(oddResult);
+
+//-----------------------------------------------------------
+//isArray();
+//Проверява дали обектът е масив. И ако е да връща "true",а ако не връща "false";
+
+let arr1 = [15, 18, 30, 50];
+let check = Array.isArray(arr1);
+
+console.log(check);
+
+let arr2 = [
+  { fruit: "apple", price: 1.5 },
+  { fruit: "orange", price: 2.5 },
+  { fruit: "strawberry", price: 3.5 },
+];
+
+let fruits = Array.isArray(arr2);
+
+console.log(fruits);
+
+let arr3 = { name: "Hristo", age: 45 };
+
+let checkName = Array.isArray(arr3);
+console.log(checkName);
