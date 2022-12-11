@@ -250,31 +250,44 @@
 //map();
 //Създава нов масив, с ф-цията, която му е задена, за всеки един елемент от оригиналния масив.
 
-let arr1 = [2, 5, 3];
-let newArr1 = arr1.map(multyply);
+// let arr1 = [2, 5, 3];
+// let newArr1 = arr1.map(multyply);
 
-function multyply(a) {
-  return a * 2;
-}
+// function multyply(a) {
+//   return a * 2;
+// }
 
-console.log(newArr1);
+// console.log(newArr1);
 
-let arr2 = [1, 2, 3];
+// let arr2 = [1, 2, 3];
 
-let newArr2 = arr2.map(plusOne);
+// let newArr2 = arr2.map(plusOne);
 
-function plusOne(b) {
-  return b + 1;
-}
+// function plusOne(b) {
+//   return b + 1;
+// }
 
-console.log(newArr2);
+// console.log(newArr2);
 
-let arr3 = [4, 2, 5, 10];
+// let arr3 = [4, 2, 5, 10];
 
-let newArr3 = arr3.map(square);
+// let newArr3 = arr3.map(square);
 
-function square(c) {
-  return Math.sqrt(c);
-}
+// function square(c) {
+//   return Math.sqrt(c);
+// }
 
-console.log(newArr3);
+// console.log(newArr3);
+
+//-----------------------------------------------------------
+//slice();
+//Връща копие на оригиналния масив, като може да се зададат параметри от къде да започне да копира и до къде.
+
+let arr1 = ["Orange", "Apple", "Strawberry"];
+console.log(arr1.slice(1, 2)); // Apple;
+
+let arr2 = ["dogs", "cats", "mouses", "tigers"];
+console.log(arr2.slice(0)); // връща клониран целия масив;
+
+let arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(arr3.slice(-3, -1)); // започва от 6 до 9 -> връща [7, 8];
