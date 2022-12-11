@@ -173,14 +173,51 @@
 //indexOf();
 //Връща индекса/позицията, на която се намира оказания от нас елемент. Той може да започне да търси зададената му стойност от определен индекс, ако му го зададем, ако не, ще започне да търси от началото до края на масива. Ако не намери елемент с определената стойност връща "-1";
 
-let arr1 = ["dog", "cat", "mouse"];
+// let arr1 = ["dog", "cat", "mouse"];
 
-console.log(arr1.indexOf("dog"));
+// console.log(arr1.indexOf("dog"));
 
-let arr2 = ["dogs", "cats", "dogs", "mouses"];
+// let arr2 = ["dogs", "cats", "dogs", "mouses"];
 
-console.log(arr2.indexOf("dogs", 1));
+// console.log(arr2.indexOf("dogs", 1));
 
-let arr3 = ["elephant", "giraffe", "bison"];
+// let arr3 = ["elephant", "giraffe", "bison"];
 
-console.log(arr3.indexOf("dogs"));
+// console.log(arr3.indexOf("dogs"));
+
+//-----------------------------------------------------------
+//forEach();
+//Извиква ф-ция за всеки един елемент от масива.
+let nums = [1, 2, 3, 4, 8];
+
+let sum = 0;
+
+nums.forEach((a) => {
+  if (typeof a === "number") {
+    sum += a;
+  }
+});
+
+console.log(sum);
+
+let names = ["John", "Smith", "Jack", "Johnat", 5, "Nataly", "Ferro"];
+
+let result = "";
+
+names.forEach((b) => {
+  if (typeof b === "string") {
+    result += " " + b;
+  }
+});
+
+console.log(result);
+
+let someNumbers = [1, 2, 3, 4, 5];
+let oddResult = [];
+
+someNumbers.forEach((currentNum) => {
+  if (currentNum % 2 !== 0) {
+    oddResult.push(currentNum);
+  }
+});
+console.log(oddResult);
