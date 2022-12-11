@@ -283,11 +283,30 @@
 //slice();
 //Връща копие на оригиналния масив, като може да се зададат параметри от къде да започне да копира и до къде.
 
-let arr1 = ["Orange", "Apple", "Strawberry"];
-console.log(arr1.slice(1, 2)); // Apple;
+// let arr1 = ["Orange", "Apple", "Strawberry"];
+// console.log(arr1.slice(1, 2)); // Apple;
 
-let arr2 = ["dogs", "cats", "mouses", "tigers"];
-console.log(arr2.slice(0)); // връща клониран целия масив;
+// let arr2 = ["dogs", "cats", "mouses", "tigers"];
+// console.log(arr2.slice(0)); // връща клониран целия масив;
 
-let arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(arr3.slice(-3, -1)); // започва от 6 до 9 -> връща [7, 8];
+// let arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(arr3.slice(-3, -1)); // започва от 6 до 9 -> връща [7, 8];
+
+//-----------------------------------------------------------
+//splice();
+//Променя контекста на зададения масив като премахва или заменя съществуващия елемент или добавя нор елемент към масива.
+
+let months = ["Jan", "Feb", "March"];
+months.splice(3, 0, "April");
+
+console.log(months);
+
+let days = ["Monday", "Wednesday", "Thursday", "Friday"];
+days.splice(1, 0, "Tuesday");
+
+console.log(days);
+
+let animals = ["dogs", "cats", "mouses", "sheeps", "cows"];
+animals.splice(3, 1, "pigs");
+
+console.log(animals);
