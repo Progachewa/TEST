@@ -563,20 +563,31 @@
 
 //ЗАДАЧА 10 --> Write a JavaScript program which prints the elements of the following array.
 
-let arr = [
-  [1, 2, 1, 24], // row 0
-  [8, 11, 9, 4], // row 1
-  [7, 0, 7, 27], // row 2
-  [7, 4, 28, 14], // row 3
-  [3, 10, 26, 7], // row 4
-];
+// let arr = [
+//   [1, 2, 1, 24], // row 0
+//   [8, 11, 9, 4], // row 1
+//   [7, 0, 7, 27], // row 2
+//   [7, 4, 28, 14], // row 3
+//   [3, 10, 26, 7], // row 4
+// ];
 
-let result = "";
+// let result = "";
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(`row ${i}`);
+//   for (let j = 0; j < arr[i].length; j++) {
+//     result = arr[i][j];
+//     console.log(result);
+//   }
+// }
+
+//ЗАДАЧА 11 -->  Write a JavaScript program to find the sum of squares of a numeric vector.
+
+let arr = [0, 1, 2, 3, 4];
+
+let sum = 0;
 
 for (let i = 0; i < arr.length; i++) {
-  console.log(`row ${i}`);
-  for (let j = 0; j < arr[i].length; j++) {
-    result = arr[i][j];
-    console.log(result);
-  }
+  sum += arr[i] * arr[i];
 }
+console.log(sum);
