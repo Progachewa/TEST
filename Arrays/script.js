@@ -457,17 +457,27 @@
 
 //ЗАДАЧА 4 --> Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
 
-function lastElement(element, counter) {
-  let lastElement = element.slice(-1);
-  if (counter > element.length) {
-    console.log(element.length);
-  }
-  if (counter <= element.length) {
-    console.log(element.slice(0, counter));
-  }
-  if (counter == null) {
-    console.log(lastElement);
-  }
+// function lastElement(element, counter) {
+//   let lastElement = element.slice(-1);
+//   if (counter > element.length) {
+//     console.log(element.length);
+//   }
+//   if (counter <= element.length) {
+//     console.log(element.slice(0, counter));
+//   }
+//   if (counter == null) {
+//     console.log(lastElement);
+//   }
+// }
+
+// lastElement([7, 9, 0, -2], 3);
+
+//ЗАДАЧА 5 --> Write a simple JavaScript program to join all elements of the following array into a string.
+
+function returnString(elements) {
+  let result = "";
+  result = elements.join("+");
+  console.log(result);
 }
 
-lastElement([7, 9, 0, -2], 3);
+returnString(["Red", "Green", "White", "Black"]);
