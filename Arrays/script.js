@@ -357,13 +357,33 @@
 //pop();
 //Премахва последния елемент от масива, но пази стойността му.
 
-let ages = [25, 29, 34, 20, 18];
-let rmvLast = ages.pop();
-console.log(ages);
+// let ages = [25, 29, 34, 20, 18];
+// let rmvLast = ages.pop();
+// console.log(ages);
 
-let animals = ["dog", "cat", "mouse"];
-let rmvAnimal = animals.pop();
-console.log(rmvAnimal);
+// let animals = ["dog", "cat", "mouse"];
+// let rmvAnimal = animals.pop();
+// console.log(rmvAnimal);
 
-let names = ["Hristo", "Ivan", "Maria"];
-console.log(names.pop());
+// let names = ["Hristo", "Ivan", "Maria"];
+// console.log(names.pop());
+
+//-----------------------------------------------------------
+//push();
+//Добавя нов елемент в края на масива.
+
+let a = ["dog", "cat"];
+a.push("mouse");
+
+console.log(a);
+
+let b = [1, 2, 3, 4, 5, 6, 7];
+b.push(8, 9);
+
+console.log(b);
+
+let c = [1, 2, 3];
+let d = [4, 5, 6];
+c.push(...d);
+
+console.log(c);
