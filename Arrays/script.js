@@ -429,10 +429,28 @@
 
 //ЗАДАЧА 2 --> Write a JavaScript function to clone an array.
 
-function clone(first, second) {
-  let cloneFirst = first.slice(0);
-  let CloneSecond = second.slice(0);
-  console.log(cloneFirst, CloneSecond);
-}
+// function clone(first, second) {
+//   let cloneFirst = first.slice(0);
+//   let CloneSecond = second.slice(0);
+//   console.log(cloneFirst, CloneSecond);
+// }
 
-clone([1, 2, 4, 0], [1, 2, [4, 0]]);
+// clone([1, 2, 4, 0], [1, 2, [4, 0]]);
+
+//ЗАДАЧА 3 --> Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
+
+function firstElement(elements, counter) {
+  if (counter <= elements.length && counter > 0) {
+    console.log(elements.slice(0, counter));
+  }
+  if (counter == null) {
+    console.log(elements[0]);
+  }
+  if (counter > elements.length) {
+    console.log(elements);
+  }
+  if (counter < 0) {
+    console.log([]);
+  }
+}
+firstElement([7, 9, 0, -2], 6);
