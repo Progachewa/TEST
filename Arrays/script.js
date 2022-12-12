@@ -332,23 +332,38 @@
 //shift();
 //Премахва първия елемент от масива, но пази стойността му, т.е. дори и премахнат можем да го достъпим.
 
-let a = [1, 2, 3, 4, 5];
-let removeFirst = a.shift();
+// let a = [1, 2, 3, 4, 5];
+// let removeFirst = a.shift();
 
-console.log(a, removeFirst);
+// console.log(a, removeFirst);
 
-let b = [10, 20, 30, 40];
-let result = 0;
-let rmv = b.shift();
+// let b = [10, 20, 30, 40];
+// let result = 0;
+// let rmv = b.shift();
 
-for (let i = 0; i < b.length; i++) {
-  result += b[i];
-  console.log(result);
-}
-rmv += result;
-console.log(rmv);
+// for (let i = 0; i < b.length; i++) {
+//   result += b[i];
+//   console.log(result);
+// }
+// rmv += result;
+// console.log(rmv);
 
-let c = ["Orange", "Apple", "Banana"];
-let rmvFruit = c.shift();
+// let c = ["Orange", "Apple", "Banana"];
+// let rmvFruit = c.shift();
 
-console.log(c);
+// console.log(c);
+
+//-----------------------------------------------------------
+//pop();
+//Премахва последния елемент от масива, но пази стойността му.
+
+let ages = [25, 29, 34, 20, 18];
+let rmvLast = ages.pop();
+console.log(ages);
+
+let animals = ["dog", "cat", "mouse"];
+let rmvAnimal = animals.pop();
+console.log(rmvAnimal);
+
+let names = ["Hristo", "Ivan", "Maria"];
+console.log(names.pop());
