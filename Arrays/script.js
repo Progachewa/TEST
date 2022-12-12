@@ -296,17 +296,34 @@
 //splice();
 //Променя контекста на зададения масив като премахва или заменя съществуващия елемент или добавя нор елемент към масива.
 
-let months = ["Jan", "Feb", "March"];
-months.splice(3, 0, "April");
+// let months = ["Jan", "Feb", "March"];
+// months.splice(3, 0, "April");
 
-console.log(months);
+// console.log(months);
 
-let days = ["Monday", "Wednesday", "Thursday", "Friday"];
-days.splice(1, 0, "Tuesday");
+// let days = ["Monday", "Wednesday", "Thursday", "Friday"];
+// days.splice(1, 0, "Tuesday");
 
-console.log(days);
+// console.log(days);
 
-let animals = ["dogs", "cats", "mouses", "sheeps", "cows"];
-animals.splice(3, 1, "pigs");
+// let animals = ["dogs", "cats", "mouses", "sheeps", "cows"];
+// animals.splice(3, 1, "pigs");
 
-console.log(animals);
+// console.log(animals);
+
+//-----------------------------------------------------------
+//sort();
+//Сортира елементите на масива, ако е стринг, по азбучен ред, а ако са числа по големина, но гледа първото число.Т.е. ако имам 20 и 100 ще ми покаже първо 100 и после 20!
+
+let alphabet = ["A", "B", "D", "E", "F", "H", "C", "G"];
+
+console.log(alphabet.sort());
+
+let nums = ["1", "22", "20", "3", "100"];
+
+console.log(nums.sort());
+
+let simpleNums = ["2", "3", "4", "5", "6", "7", "8", "9"];
+simpleNums.sort();
+
+console.log(simpleNums.reverse());
