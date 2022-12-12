@@ -439,18 +439,35 @@
 
 //ЗАДАЧА 3 --> Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
 
-function firstElement(elements, counter) {
-  if (counter <= elements.length && counter > 0) {
-    console.log(elements.slice(0, counter));
+// function firstElement(elements, counter) {
+//   if (counter <= elements.length && counter > 0) {
+//     console.log(elements.slice(0, counter));
+//   }
+//   if (counter == null) {
+//     console.log(elements[0]);
+//   }
+//   if (counter > elements.length) {
+//     console.log(elements);
+//   }
+//   if (counter < 0) {
+//     console.log([]);
+//   }
+// }
+// firstElement([7, 9, 0, -2], 6);
+
+//ЗАДАЧА 4 --> Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
+
+function lastElement(element, counter) {
+  let lastElement = element.slice(-1);
+  if (counter > element.length) {
+    console.log(element.length);
+  }
+  if (counter <= element.length) {
+    console.log(element.slice(0, counter));
   }
   if (counter == null) {
-    console.log(elements[0]);
-  }
-  if (counter > elements.length) {
-    console.log(elements);
-  }
-  if (counter < 0) {
-    console.log([]);
+    console.log(lastElement);
   }
 }
-firstElement([7, 9, 0, -2], 6);
+
+lastElement([7, 9, 0, -2], 3);
