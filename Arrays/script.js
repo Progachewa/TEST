@@ -419,10 +419,20 @@
 
 //ЗАДАЧА 1 --> Write a JavaScript function to check whether an `input` is an array or not.
 
-function check(a, b) {
-  a = Array.isArray(a);
-  b = Array.isArray(b);
-  console.log(a, b);
+// function check(a, b) {
+//   a = Array.isArray(a);
+//   b = Array.isArray(b);
+//   console.log(a, b);
+// }
+
+// check("w3resource", [1, 2, 4, 0]);
+
+//ЗАДАЧА 2 --> Write a JavaScript function to clone an array.
+
+function clone(first, second) {
+  let cloneFirst = first.slice(0);
+  let CloneSecond = second.slice(0);
+  console.log(cloneFirst, CloneSecond);
 }
 
-check("w3resource", [1, 2, 4, 0]);
+clone([1, 2, 4, 0], [1, 2, [4, 0]]);
