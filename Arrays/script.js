@@ -484,24 +484,41 @@
 
 //ЗАДАЧА 6 --> Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
 
-function evenResult(str) {
-  let num = str.split(""); //показва всеки един символ от елемента, като масив.
-  let numArr = num.map(Number); // прави всеки един символ от масива - число.
+// function evenResult(str) {
+//   let num = str.split(""); //показва всеки един символ от елемента, като масив.
+//   let numArr = num.map(Number); // прави всеки един символ от масива - число.
 
-  let result = "";
+//   let result = "";
 
-  for (let i = 0; i < numArr.length; i++) {
-    if (
-      numArr[i - 1] % 2 === 0 &&
-      num[i] % 2 === 0 &&
-      numArr[i + 1] !== undefined
-    ) {
-      result = result + numArr[i] + "-";
-    } else {
-      result = result + numArr[i];
-    }
+//   for (let i = 0; i < numArr.length; i++) {
+//     if (
+//       numArr[i - 1] % 2 === 0 &&
+//       num[i] % 2 === 0 &&
+//       numArr[i + 1] !== undefined
+//     ) {
+//       result = result + numArr[i] + "-";
+//     } else {
+//       result = result + numArr[i];
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(evenResult("025468"));
+
+//ЗАДАЧА 7 -->  Write a JavaScript program to sort the items of an array.
+
+let nums = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+
+nums.sort((a, b) => {
+  if (a < b) {
+    return -1;
   }
-  return result;
-}
+  if (a > b) {
+    return 1;
+  } else {
+    return 0;
+  }
+});
 
-console.log(evenResult("025468"));
+console.log(nums);
