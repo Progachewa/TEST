@@ -372,18 +372,45 @@
 //push();
 //Добавя нов елемент в края на масива.
 
-let a = ["dog", "cat"];
-a.push("mouse");
+// let a = ["dog", "cat"];
+// a.push("mouse");
 
-console.log(a);
+// console.log(a);
 
-let b = [1, 2, 3, 4, 5, 6, 7];
-b.push(8, 9);
+// let b = [1, 2, 3, 4, 5, 6, 7];
+// b.push(8, 9);
 
-console.log(b);
+// console.log(b);
 
-let c = [1, 2, 3];
-let d = [4, 5, 6];
-c.push(...d);
+// let c = [1, 2, 3];
+// let d = [4, 5, 6];
+// c.push(...d);
 
-console.log(c);
+// console.log(c);
+
+//-----------------------------------------------------------
+//reduce();
+//Изпълнява зададена мъ фунцкия за всеки един елемент от масива, но връща единична стойност от натрупания резултат.
+
+let sum = [10, 10, 10];
+
+function sumNumbers(a, b) {
+  return a + b;
+}
+console.log(sum.reduce(sumNumbers));
+
+let tasks = [1, 2, 3, 4, 5];
+
+function testTask(c, d) {
+  return c * d;
+}
+
+console.log(tasks.reduce(testTask));
+
+let arr = [15.5, 2.3, 1.1, 4.7];
+
+function getSum(total, num) {
+  return total + Math.round(num);
+}
+
+console.log(arr.reduce(getSum, 0));
