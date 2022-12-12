@@ -315,15 +315,40 @@
 //sort();
 //Сортира елементите на масива, ако е стринг, по азбучен ред, а ако са числа по големина, но гледа първото число.Т.е. ако имам 20 и 100 ще ми покаже първо 100 и после 20!
 
-let alphabet = ["A", "B", "D", "E", "F", "H", "C", "G"];
+// let alphabet = ["A", "B", "D", "E", "F", "H", "C", "G"];
 
-console.log(alphabet.sort());
+// console.log(alphabet.sort());
 
-let nums = ["1", "22", "20", "3", "100"];
+// let nums = ["1", "22", "20", "3", "100"];
 
-console.log(nums.sort());
+// console.log(nums.sort());
 
-let simpleNums = ["2", "3", "4", "5", "6", "7", "8", "9"];
-simpleNums.sort();
+// let simpleNums = ["2", "3", "4", "5", "6", "7", "8", "9"];
+// simpleNums.sort();
 
-console.log(simpleNums.reverse());
+// console.log(simpleNums.reverse());
+
+//-----------------------------------------------------------
+//shift();
+//Премахва първия елемент от масива, но пази стойността му, т.е. дори и премахнат можем да го достъпим.
+
+let a = [1, 2, 3, 4, 5];
+let removeFirst = a.shift();
+
+console.log(a, removeFirst);
+
+let b = [10, 20, 30, 40];
+let result = 0;
+let rmv = b.shift();
+
+for (let i = 0; i < b.length; i++) {
+  result += b[i];
+  console.log(result);
+}
+rmv += result;
+console.log(rmv);
+
+let c = ["Orange", "Apple", "Banana"];
+let rmvFruit = c.shift();
+
+console.log(c);
