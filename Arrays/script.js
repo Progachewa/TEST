@@ -392,25 +392,37 @@
 //reduce();
 //Изпълнява зададена мъ фунцкия за всеки един елемент от масива, но връща единична стойност от натрупания резултат.
 
-let sum = [10, 10, 10];
+// let sum = [10, 10, 10];
 
-function sumNumbers(a, b) {
-  return a + b;
+// function sumNumbers(a, b) {
+//   return a + b;
+// }
+// console.log(sum.reduce(sumNumbers));
+
+// let tasks = [1, 2, 3, 4, 5];
+
+// function testTask(c, d) {
+//   return c * d;
+// }
+
+// console.log(tasks.reduce(testTask));
+
+// let arr = [15.5, 2.3, 1.1, 4.7];
+
+// function getSum(total, num) {
+//   return total + Math.round(num);
+// }
+
+// console.log(arr.reduce(getSum, 0));
+
+//----------------------------------------------------------- ЗАДАЧИ ARRAY
+
+//ЗАДАЧА 1 --> Write a JavaScript function to check whether an `input` is an array or not.
+
+function check(a, b) {
+  a = Array.isArray(a);
+  b = Array.isArray(b);
+  console.log(a, b);
 }
-console.log(sum.reduce(sumNumbers));
 
-let tasks = [1, 2, 3, 4, 5];
-
-function testTask(c, d) {
-  return c * d;
-}
-
-console.log(tasks.reduce(testTask));
-
-let arr = [15.5, 2.3, 1.1, 4.7];
-
-function getSum(total, num) {
-  return total + Math.round(num);
-}
-
-console.log(arr.reduce(getSum, 0));
+check("w3resource", [1, 2, 4, 0]);
