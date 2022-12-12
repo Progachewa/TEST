@@ -546,17 +546,37 @@
 
 //ЗАДАЧА 9 -->Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'
 
-let str = "The Quick Brown Fox";
+// let str = "The Quick Brown Fox";
 
-let strArr = str.split("");
+// let strArr = str.split("");
+// let result = "";
+
+// for (let i = 0; i < strArr.length; i++) {
+//   if (strArr[i] === strArr[i].toUpperCase()) {
+//     result += strArr[i].toLowerCase();
+//   }
+//   if (strArr[i] === strArr[i].toLowerCase()) {
+//     result += strArr[i].toUpperCase();
+//   }
+// }
+// console.log(result);
+
+//ЗАДАЧА 10 --> Write a JavaScript program which prints the elements of the following array.
+
+let arr = [
+  [1, 2, 1, 24], // row 0
+  [8, 11, 9, 4], // row 1
+  [7, 0, 7, 27], // row 2
+  [7, 4, 28, 14], // row 3
+  [3, 10, 26, 7], // row 4
+];
+
 let result = "";
 
-for (let i = 0; i < strArr.length; i++) {
-  if (strArr[i] === strArr[i].toUpperCase()) {
-    result += strArr[i].toLowerCase();
-  }
-  if (strArr[i] === strArr[i].toLowerCase()) {
-    result += strArr[i].toUpperCase();
+for (let i = 0; i < arr.length; i++) {
+  console.log(`row ${i}`);
+  for (let j = 0; j < arr[i].length; j++) {
+    result = arr[i][j];
+    console.log(result);
   }
 }
-console.log(result);
