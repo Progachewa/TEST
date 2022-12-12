@@ -474,10 +474,34 @@
 
 //ЗАДАЧА 5 --> Write a simple JavaScript program to join all elements of the following array into a string.
 
-function returnString(elements) {
+// function returnString(elements) {
+//   let result = "";
+//   result = elements.join("+");
+//   console.log(result);
+// }
+
+// returnString(["Red", "Green", "White", "Black"]);
+
+//ЗАДАЧА 6 --> Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+
+function evenResult(str) {
+  let num = str.split(""); //показва всеки един символ от елемента, като масив.
+  let numArr = num.map(Number); // прави всеки един символ от масива - число.
+
   let result = "";
-  result = elements.join("+");
-  console.log(result);
+
+  for (let i = 0; i < numArr.length; i++) {
+    if (
+      numArr[i - 1] % 2 === 0 &&
+      num[i] % 2 === 0 &&
+      numArr[i + 1] !== undefined
+    ) {
+      result = result + numArr[i] + "-";
+    } else {
+      result = result + numArr[i];
+    }
+  }
+  return result;
 }
 
-returnString(["Red", "Green", "White", "Black"]);
+console.log(evenResult("025468"));
