@@ -508,17 +508,38 @@
 
 //ЗАДАЧА 7 -->  Write a JavaScript program to sort the items of an array.
 
-let nums = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+// let nums = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
 
-nums.sort((a, b) => {
-  if (a < b) {
-    return -1;
-  }
-  if (a > b) {
-    return 1;
-  } else {
-    return 0;
-  }
-});
+// nums.sort((a, b) => {
+//   if (a < b) {
+//     return -1;
+//   }
+//   if (a > b) {
+//     return 1;
+//   } else {
+//     return 0;
+//   }
+// });
 
-console.log(nums);
+// console.log(nums);
+
+//ЗАДАЧА 8 --> Write a JavaScript program to find the most frequent item of an array.
+
+let elements = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+let counter = 0;
+let maxCounter = 0;
+let item = "";
+
+for (let i = 0; i < elements.length; i++) {
+  for (let j = i; j < elements.length; j++) {
+    if (elements[i] == elements[j]) {
+      counter++;
+    }
+    if (counter > maxCounter) {
+      maxCounter = counter;
+      item = elements[i];
+    }
+  }
+  counter = 0;
+}
+console.log(`${item} (${maxCounter} times)`);
