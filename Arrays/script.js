@@ -680,7 +680,27 @@
 
 //ЗАДАЧА 18 --> Write a JavaScript program to perform a binary search.
 
-function binary(items, index) {
-  return items.indexOf(index);
+// function binary(items, index) {
+//   return items.indexOf(index);
+// }
+// console.log(binary([1, 2, 3, 4, 5, 7, 8, 9], 5));
+
+//ЗАДАЧА 19 --> There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays.
+// array1 = [1,0,2,3,4];
+// array2 = [3,5,6,7,8,13];
+// Expected Output :
+// [4, 5, 8, 10, 12, 13]
+
+let arr1 = [1, 0, 2, 3, 4];
+let arr2 = [3, 5, 6, 7, 8, 13];
+
+let result = [];
+
+for (let i = 0; i < arr2.length; i++) {
+  if (arr1.length === arr2.length) {
+    result.push(arr1[i] + arr2[i]);
+  } else {
+    result.push(arr2[i]);
+  }
 }
-console.log(binary([1, 2, 3, 4, 5, 7, 8, 9], 5));
+console.log(result);
