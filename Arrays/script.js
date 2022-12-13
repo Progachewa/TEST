@@ -594,14 +594,34 @@
 
 //ЗАДАЧА 12 --> Write a JavaScript program to compute the sum and product of an array of integers
 
-function sumAndMultiply(nums) {
-  let sum = 0;
-  let multiply = 1;
+// function sumAndMultiply(nums) {
+//   let sum = 0;
+//   let multiply = 1;
 
-  for (let i = 0; i < nums.length; i++) {
-    sum += nums[i];
-    multiply *= nums[i];
-  }
-  console.log(sum, multiply);
+//   for (let i = 0; i < nums.length; i++) {
+//     sum += nums[i];
+//     multiply *= nums[i];
+//   }
+//   console.log(sum, multiply);
+// }
+// sumAndMultiply([1, 2, 3, 4, 5]);
+
+//ЗАДАЧА 13 --> Write a JavaScript program to add items in an blank array and display the items.
+
+let a = 0;
+let arr = Array();
+
+function addItem() {
+  arr[a] = document.getElementById("txt").value;
+  alert("Your text: " + " " + arr[a] + " " + " at index: " + a);
+  a++;
+  document.getElementById("txt").value = "";
 }
-sumAndMultiply([1, 2, 3, 4, 5]);
+
+function displayItem() {
+  let display = "";
+  for (let i = 0; i < arr.length; i++) {
+    display += "Element" + " " + i + " " + "=" + " " + arr[i] + "<br/>";
+  }
+  document.getElementById("result").innerHTML = display;
+}
