@@ -628,10 +628,28 @@
 
 //ЗАДАЧА 14 --> Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
 
-let arr = [1, 2, 3, 1, 4, 5, 1, 1, 2];
+// let arr = [1, 2, 3, 1, 4, 5, 1, 1, 2];
 
-function removeDuplicates(arr) {
-  return [...new Set(arr)];
+// function removeDuplicates(arr) {
+//   return [...new Set(arr)];
+// }
+
+// console.log(removeDuplicates(arr));
+
+//ЗАДАЧА 15 --> We have the following arrays :color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+//o = ["th","st","nd","rd"]. Write a JavaScript program to display the colors in the following way :
+// "1st choice is Blue ."
+// "2nd choice is Green."
+// "3rd choice is Red."
+
+let a = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+let b = ["th", "st", "nd", "rd"];
+
+// изписва ми числата
+for (let i = 0; i < a.length; i++) {
+  // проверявам дали има досататъчно елементи в "b", които да отговарят на "a". Ако няма, т.е. са "undefined" добавям 1-вия елемент от масив "b";
+  if (b[i + 1] == undefined) {
+    b[i + 1] = b[0];
+  }
+  console.log(`${i + 1} ${b[i + 1]} choice is ${a[i]}`);
 }
-
-console.log(removeDuplicates(arr));
