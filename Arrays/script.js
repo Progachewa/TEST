@@ -656,17 +656,24 @@
 
 //ЗАДАЧА 16 --> Write a JavaScript program to find the leap years in a given range of years
 
-let result = "";
+// let result = "";
 
-function leapYear(years) {
-  for (let i = 0; i < years.length; i++) {
-    if (years[i] % 4 === 0 && years[i] % 400 === 0) {
-      result = ` ${years[i]} - It is a leap year`;
-    }
-    if (years[i] % 100 !== 0) {
-      result = ` ${years[i]} - It is not a leap year`;
-    }
-    console.log(result);
-  }
-}
-leapYear([2000, 2002]);
+// function leapYear(years) {
+//   for (let i = 0; i < years.length; i++) {
+//     if (years[i] % 4 === 0 && years[i] % 400 === 0) {
+//       result = ` ${years[i]} - It is a leap year`;
+//     }
+//     if (years[i] % 100 !== 0) {
+//       result = ` ${years[i]} - It is not a leap year`;
+//     }
+//     console.log(result);
+//   }
+// }
+// leapYear([2000, 2002]);
+
+//ЗАДАЧА 17 --> Write a JavaScript program to shuffle an array.
+
+let nums = [0, 1, 2, 3, 4];
+let shuffleNums = nums.sort((a, b) => 0.5 - Math.random());
+
+console.log(shuffleNums);
