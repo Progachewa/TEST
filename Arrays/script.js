@@ -583,11 +583,25 @@
 
 //ЗАДАЧА 11 -->  Write a JavaScript program to find the sum of squares of a numeric vector.
 
-let arr = [0, 1, 2, 3, 4];
+// let arr = [0, 1, 2, 3, 4];
 
-let sum = 0;
+// let sum = 0;
 
-for (let i = 0; i < arr.length; i++) {
-  sum += arr[i] * arr[i];
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i] * arr[i];
+// }
+// console.log(sum);
+
+//ЗАДАЧА 12 --> Write a JavaScript program to compute the sum and product of an array of integers
+
+function sumAndMultiply(nums) {
+  let sum = 0;
+  let multiply = 1;
+
+  for (let i = 0; i < nums.length; i++) {
+    sum += nums[i];
+    multiply *= nums[i];
+  }
+  console.log(sum, multiply);
 }
-console.log(sum);
+sumAndMultiply([1, 2, 3, 4, 5]);
