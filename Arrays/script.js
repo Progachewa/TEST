@@ -608,20 +608,30 @@
 
 //ЗАДАЧА 13 --> Write a JavaScript program to add items in an blank array and display the items.
 
-let a = 0;
-let arr = Array();
+// let a = 0;
+// let arr = Array();
 
-function addItem() {
-  arr[a] = document.getElementById("txt").value;
-  alert("Your text: " + " " + arr[a] + " " + " at index: " + a);
-  a++;
-  document.getElementById("txt").value = "";
+// function addItem() {
+//   arr[a] = document.getElementById("txt").value;
+//   alert("Your text: " + " " + arr[a] + " " + " at index: " + a);
+//   a++;
+//   document.getElementById("txt").value = "";
+// }
+
+// function displayItem() {
+//   let display = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     display += "Element" + " " + i + " " + "=" + " " + arr[i] + "<br/>";
+//   }
+//   document.getElementById("result").innerHTML = display;
+// }
+
+//ЗАДАЧА 14 --> Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+
+let arr = [1, 2, 3, 1, 4, 5, 1, 1, 2];
+
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
 }
 
-function displayItem() {
-  let display = "";
-  for (let i = 0; i < arr.length; i++) {
-    display += "Element" + " " + i + " " + "=" + " " + arr[i] + "<br/>";
-  }
-  document.getElementById("result").innerHTML = display;
-}
+console.log(removeDuplicates(arr));
