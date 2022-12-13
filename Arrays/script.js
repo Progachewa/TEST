@@ -642,14 +642,31 @@
 // "2nd choice is Green."
 // "3rd choice is Red."
 
-let a = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
-let b = ["th", "st", "nd", "rd"];
+// let a = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+// let b = ["th", "st", "nd", "rd"];
 
-// изписва ми числата
-for (let i = 0; i < a.length; i++) {
-  // проверявам дали има досататъчно елементи в "b", които да отговарят на "a". Ако няма, т.е. са "undefined" добавям 1-вия елемент от масив "b";
-  if (b[i + 1] == undefined) {
-    b[i + 1] = b[0];
+// // изписва ми числата
+// for (let i = 0; i < a.length; i++) {
+//   // проверявам дали има досататъчно елементи в "b", които да отговарят на "a". Ако няма, т.е. са "undefined" добавям 1-вия елемент от масив "b";
+//   if (b[i + 1] == undefined) {
+//     b[i + 1] = b[0];
+//   }
+//   console.log(`${i + 1} ${b[i + 1]} choice is ${a[i]}`);
+// }
+
+//ЗАДАЧА 16 --> Write a JavaScript program to find the leap years in a given range of years
+
+let result = "";
+
+function leapYear(years) {
+  for (let i = 0; i < years.length; i++) {
+    if (years[i] % 4 === 0 && years[i] % 400 === 0) {
+      result = ` ${years[i]} - It is a leap year`;
+    }
+    if (years[i] % 100 !== 0) {
+      result = ` ${years[i]} - It is not a leap year`;
+    }
+    console.log(result);
   }
-  console.log(`${i + 1} ${b[i + 1]} choice is ${a[i]}`);
 }
+leapYear([2000, 2002]);
