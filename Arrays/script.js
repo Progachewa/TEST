@@ -673,7 +673,14 @@
 
 //ЗАДАЧА 17 --> Write a JavaScript program to shuffle an array.
 
-let nums = [0, 1, 2, 3, 4];
-let shuffleNums = nums.sort((a, b) => 0.5 - Math.random());
+// let nums = [0, 1, 2, 3, 4];
+// let shuffleNums = nums.sort((a, b) => 0.5 - Math.random());
 
-console.log(shuffleNums);
+// console.log(shuffleNums);
+
+//ЗАДАЧА 18 --> Write a JavaScript program to perform a binary search.
+
+function binary(items, index) {
+  return items.indexOf(index);
+}
+console.log(binary([1, 2, 3, 4, 5, 7, 8, 9], 5));
