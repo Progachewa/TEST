@@ -759,12 +759,26 @@
 // console.log(b); // [1, 2, 3, 4, 5, 6];
 // console.log(c); // [1, 2, 3, [4], 5, 6];
 
-function nestedArrays(nestedArray, deep) {
-  let nested = nestedArray.flat(deep);
-  if (deep === undefined) {
-    console.log(nested.flat(100));
-  } else {
-    console.log(nested);
-  }
+// function nestedArrays(nestedArray, deep) {
+//   let nested = nestedArray.flat(deep);
+//   if (deep === undefined) {
+//     console.log(nested.flat(100));
+//   } else {
+//     console.log(nested);
+//   }
+// }
+// nestedArrays([1, [2], [3, [[4]]], [5, 6]]);
+
+//ЗАДАЧА 24 --> Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array.
+//[NaN, 0, 15, false, -22, '',undefined, 47, null] -- > output:  [15, -22, 47];
+
+function removeFalseValue(items) {
+  return items.filter((value) => {
+    if (value) {
+      return value;
+    }
+  });
 }
-nestedArrays([1, [2], [3, [[4]]], [5, 6]]);
+console.log(
+  removeFalseValue([NaN, 0, 15, false, -22, "", undefined, 47, null, 0])
+);
