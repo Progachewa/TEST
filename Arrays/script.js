@@ -818,14 +818,26 @@
 
 //ЗАДАЧА 26-->Write a JavaScript program to find a pair of elements (indices of the two numbers) from an given array whose sum equals a specific target number.
 
-function sumTwoNumbers(nums, target) {
-  let result = [];
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] + nums[i + 1] === target) {
-      result.push(nums.indexOf(nums[i]), nums.indexOf(nums[i + 1]));
-    }
-  }
-  console.log(result);
-}
+// function sumTwoNumbers(nums, target) {
+//   let result = [];
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] + nums[i + 1] === target) {
+//       result.push(nums.indexOf(nums[i]), nums.indexOf(nums[i + 1]));
+//     }
+//   }
+//   console.log(result);
+// }
 
-sumTwoNumbers([10, 20, 10, 40, 50, 60, 70], 50);
+// sumTwoNumbers([10, 20, 10, 40, 50, 60, 70], 50);
+
+//ЗАДАЧА 27--> Write a JavaScript function to retrieve the value of a given property from all elements in an array.
+//[NaN, 0, 15, false, -22, '',undefined, 47, null] -> output: [15, -22, 47];
+
+function valueOfArray(items) {
+  return items.filter((item) => {
+    if (item) {
+      return item;
+    }
+  });
+}
+console.log(valueOfArray([NaN, 0, 15, false, -22, "", undefined, 47, null]));
