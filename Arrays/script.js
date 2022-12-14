@@ -733,7 +733,6 @@
 
 //ЗАДАЧА 22 -->  Write a JavaScript program to compute the union of two arrays.
 //[1, 2, 3], [100, 2, 1, 10] -> output: [1, 2, 3, 10, 100];
-// реших я за 10 минути (happy);
 
 // function concatArray(arr1, arr2) {
 //   let mergeArrays = arr1.concat(arr2);
@@ -833,11 +832,30 @@
 //ЗАДАЧА 27--> Write a JavaScript function to retrieve the value of a given property from all elements in an array.
 //[NaN, 0, 15, false, -22, '',undefined, 47, null] -> output: [15, -22, 47];
 
-function valueOfArray(items) {
-  return items.filter((item) => {
-    if (item) {
-      return item;
-    }
-  });
+// function valueOfArray(items) {
+//   return items.filter((item) => {
+//     if (item) {
+//       return item;
+//     }
+//   });
+// }
+// console.log(valueOfArray([NaN, 0, 15, false, -22, "", undefined, 47, null]));
+
+//ЗАДАЧА 28--> Write a JavaScript function to find the longest common starting substring in a set of strings.
+//['go', 'google'] --> output "go";
+
+function longestSubstring(arr) {
+  let index = 0;
+  let element = arr[0];
+  let nextElement = arr[1];
+
+  while (
+    index < element.length &&
+    element.charAt(index) === nextElement.charAt(index)
+  )
+    index++;
+  {
+    return element.substring(0, index);
+  }
 }
-console.log(valueOfArray([NaN, 0, 15, false, -22, "", undefined, 47, null]));
+console.log(longestSubstring(["go", "google"]));
