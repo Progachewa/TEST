@@ -628,13 +628,14 @@
 
 //ЗАДАЧА 14 --> Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
 
-// let arr = [1, 2, 3, 1, 4, 5, 1, 1, 2];
+function removeDuplicate(items) {
+  let duplicate = items.filter((item, value) => {
+    return items.indexOf(item) === value;
+  });
+  console.log(duplicate);
+}
 
-// function removeDuplicates(arr) {
-//   return [...new Set(arr)];
-// }
-
-// console.log(removeDuplicates(arr));
+removeDuplicate([1, 2, 3, 1, 4, 5, 1, 1, 2]);
 
 //ЗАДАЧА 15 --> We have the following arrays :color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
 //o = ["th","st","nd","rd"]. Write a JavaScript program to display the colors in the following way :
@@ -642,7 +643,7 @@
 // "2nd choice is Green."
 // "3rd choice is Red."
 
-// let a = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+// let a = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
 // let b = ["th", "st", "nd", "rd"];
 
 // // изписва ми числата
@@ -656,15 +657,15 @@
 
 //ЗАДАЧА 16 --> Write a JavaScript program to find the leap years in a given range of years
 
-// let result = "";
-
 // function leapYear(years) {
+//   let result = "";
 //   for (let i = 0; i < years.length; i++) {
-//     if (years[i] % 4 === 0 && years[i] % 400 === 0) {
-//       result = ` ${years[i]} - It is a leap year`;
+//     let year = years[i];
+//     if (year % 4 === 0 && year % 400 === 0) {
+//       result = `${year} - It is a leap year`;
 //     }
-//     if (years[i] % 100 !== 0) {
-//       result = ` ${years[i]} - It is not a leap year`;
+//     if (year % 100 !== 0) {
+//       result = `${year} - It is not a leap year`;
 //     }
 //     console.log(result);
 //   }
@@ -691,16 +692,33 @@
 // Expected Output :
 // [4, 5, 8, 10, 12, 13]
 
-let arr1 = [1, 0, 2, 3, 4];
-let arr2 = [3, 5, 6, 7, 8, 13];
+// let arr1 = [1, 0, 2, 3, 4];
+// let arr2 = [3, 5, 6, 7, 8, 13];
 
-let result = [];
+// let result = [];
 
-for (let i = 0; i < arr2.length; i++) {
-  if (arr1.length === arr2.length) {
-    result.push(arr1[i] + arr2[i]);
-  } else {
-    result.push(arr2[i]);
-  }
-}
-console.log(result);
+// for (let i = 0; i < arr2.length; i++) {
+//   if (arr1.length === arr2.length) {
+//     result.push(arr1[i] + arr2[i]);
+//   } else {
+//     result.push(arr2[i]);
+//   }
+// }
+// console.log(result);
+
+//..Proba
+// let arr = [1, 2, 6, 6, 8, 9, 1, 1, 2, 3, 6];
+
+// let cloneArr = arr.slice().sort();
+
+// let result = [];
+
+// for (let i = 0; i < cloneArr.length; i++) {
+//   if (cloneArr[i + 1] === cloneArr[i]) {
+//     result.push(cloneArr[i]);
+//   }
+// }
+// console.log(`The duplicates in ${cloneArr} are : ${result}`);
+
+//ЗАДАЧА 20 -->Write a JavaScript program to find duplicate values in a JavaScript array.
+//[1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6] - output: ["4","7"]
