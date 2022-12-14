@@ -628,14 +628,14 @@
 
 //ЗАДАЧА 14 --> Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
 
-function removeDuplicate(items) {
-  let duplicate = items.filter((item, value) => {
-    return items.indexOf(item) === value;
-  });
-  console.log(duplicate);
-}
+// function removeDuplicate(items) {
+//   let duplicate = items.filter((item, value) => {
+//     return items.indexOf(item) === value;
+//   });
+//   console.log(duplicate);
+// }
 
-removeDuplicate([1, 2, 3, 1, 4, 5, 1, 1, 2]);
+// removeDuplicate([1, 2, 3, 1, 4, 5, 1, 1, 2]);
 
 //ЗАДАЧА 15 --> We have the following arrays :color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
 //o = ["th","st","nd","rd"]. Write a JavaScript program to display the colors in the following way :
@@ -722,3 +722,11 @@ removeDuplicate([1, 2, 3, 1, 4, 5, 1, 1, 2]);
 
 //ЗАДАЧА 20 -->Write a JavaScript program to find duplicate values in a JavaScript array.
 //[1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6] - output: ["4","7"]
+
+function findDuplicateItem(items) {
+  let duplicateItem = items.filter((item, value) => {
+    return items.indexOf(item) !== value;
+  });
+  console.log(duplicateItem);
+}
+findDuplicateItem([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]);
