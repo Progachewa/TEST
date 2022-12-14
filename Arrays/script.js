@@ -790,28 +790,42 @@
 // { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
 // ];
 
-function sortArray() {
-  let library = [
-    { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
-    { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
-    {
-      author: "Suzanne Collins",
-      title: "Mockingjay: The Final Book of The Hunger Games",
-      libraryID: 3245,
-    },
-  ];
+// function sortArray() {
+//   let library = [
+//     { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
+//     { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
+//     {
+//       author: "Suzanne Collins",
+//       title: "Mockingjay: The Final Book of The Hunger Games",
+//       libraryID: 3245,
+//     },
+//   ];
 
-  library.sort((a, b) => {
-    if (a.title < b.title) {
-      return -1;
+//   library.sort((a, b) => {
+//     if (a.title < b.title) {
+//       return -1;
+//     }
+//     if (a.title > b.title) {
+//       return 1;
+//     } else {
+//       return 0;
+//     }
+//   });
+//   console.log(library);
+// }
+
+// sortArray();
+
+//ЗАДАЧА 26-->Write a JavaScript program to find a pair of elements (indices of the two numbers) from an given array whose sum equals a specific target number.
+
+function sumTwoNumbers(nums, target) {
+  let result = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] + nums[i + 1] === target) {
+      result.push(nums.indexOf(nums[i]), nums.indexOf(nums[i + 1]));
     }
-    if (a.title > b.title) {
-      return 1;
-    } else {
-      return 0;
-    }
-  });
-  console.log(library);
+  }
+  console.log(result);
 }
 
-sortArray();
+sumTwoNumbers([10, 20, 10, 40, 50, 60, 70], 50);
