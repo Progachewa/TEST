@@ -723,10 +723,24 @@
 //ЗАДАЧА 20 -->Write a JavaScript program to find duplicate values in a JavaScript array.
 //[1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6] - output: ["4","7"]
 
-function findDuplicateItem(items) {
-  let duplicateItem = items.filter((item, value) => {
-    return items.indexOf(item) !== value;
+// function findDuplicateItem(items) {
+//   let duplicateItem = items.filter((item, value) => {
+//     return items.indexOf(item) !== value;
+//   });
+//   console.log(duplicateItem);
+// }
+// findDuplicateItem([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]);
+
+//ЗАДАЧА 22 -->  Write a JavaScript program to compute the union of two arrays.
+//[1, 2, 3], [100, 2, 1, 10] -> output: [1, 2, 3, 10, 100];
+// реших я за 10 минути (happy);
+
+function concatArray(arr1, arr2) {
+  let mergeArrays = arr1.concat(arr2);
+  let removeDuplicateItem = mergeArrays.filter((item, value) => {
+    return mergeArrays.indexOf(item) === value;
   });
-  console.log(duplicateItem);
+  console.log(removeDuplicateItem);
 }
-findDuplicateItem([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]);
+
+concatArray([1, 2, 3], [100, 2, 1, 10]);
