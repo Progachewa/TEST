@@ -772,13 +772,46 @@
 //ЗАДАЧА 24 --> Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array.
 //[NaN, 0, 15, false, -22, '',undefined, 47, null] -- > output:  [15, -22, 47];
 
-function removeFalseValue(items) {
-  return items.filter((value) => {
-    if (value) {
-      return value;
+// function removeFalseValue(items) {
+//   return items.filter((value) => {
+//     if (value) {
+//       return value;
+//     }
+//   });
+// }
+// console.log(
+//   removeFalseValue([NaN, 0, 15, false, -22, "", undefined, 47, null, 0])
+// );
+
+//ЗАДАЧА 25 -->  Write a JavaScript function to sort the following array of objects by title value.
+// var library = [
+// { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+// { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+// { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+// ];
+
+function sortArray() {
+  let library = [
+    { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
+    { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
+    {
+      author: "Suzanne Collins",
+      title: "Mockingjay: The Final Book of The Hunger Games",
+      libraryID: 3245,
+    },
+  ];
+
+  library.sort((a, b) => {
+    if (a.title < b.title) {
+      return -1;
+    }
+    if (a.title > b.title) {
+      return 1;
+    } else {
+      return 0;
     }
   });
+  console.log(library);
 }
-console.log(
-  removeFalseValue([NaN, 0, 15, false, -22, "", undefined, 47, null, 0])
-);
+
+sortArray();
