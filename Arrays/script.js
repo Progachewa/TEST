@@ -735,12 +735,36 @@
 //[1, 2, 3], [100, 2, 1, 10] -> output: [1, 2, 3, 10, 100];
 // реших я за 10 минути (happy);
 
-function concatArray(arr1, arr2) {
-  let mergeArrays = arr1.concat(arr2);
-  let removeDuplicateItem = mergeArrays.filter((item, value) => {
-    return mergeArrays.indexOf(item) === value;
-  });
-  console.log(removeDuplicateItem);
-}
+// function concatArray(arr1, arr2) {
+//   let mergeArrays = arr1.concat(arr2);
+//   let removeDuplicateItem = mergeArrays.filter((item, value) => {
+//     return mergeArrays.indexOf(item) === value;
+//   });
+//   console.log(removeDuplicateItem);
+// }
 
-concatArray([1, 2, 3], [100, 2, 1, 10]);
+// concatArray([1, 2, 3], [100, 2, 1, 10]);
+
+//ЗАДАЧА 21 -->Write a JavaScript program to flatten a nested (any depth) array. If you pass shallow, the array will only be flattened a single level.
+// [1, [2], [3, [[4]]],[5,6]] -> output: [1, 2, 3, 4, 5, 6]
+// ([1, [2], [3, [[4]]],[5,6]], true) -> output: [1, 2, 3, [[4]], 5, 6];
+
+// flat();
+// Обединява вложени масиви, като може да му се зададе параметър до каква дълбочина да ги обединява.
+//Пример:
+// let a = [1, [2], [3, [[4]]], [5, 6]];
+// let b = a.flat(3);
+// let c = a.flat(0);
+
+// console.log(b); // [1, 2, 3, 4, 5, 6];
+// console.log(c); // [1, 2, 3, [4], 5, 6];
+
+function nestedArrays(nestedArray, deep) {
+  let nested = nestedArray.flat(deep);
+  if (deep === undefined) {
+    console.log(nested.flat(100));
+  } else {
+    console.log(nested);
+  }
+}
+nestedArrays([1, [2], [3, [[4]]], [5, 6]]);
