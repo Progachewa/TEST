@@ -870,3 +870,33 @@
 //   console.log(result);
 // }
 // sumFirstLast([20, 30, 40]);
+
+//Задача 2 --> Write a program, which receives a number and prints the corresponding name of the day of the week (in English).
+//If the number is NOT a valid day, print: "Invalid day!".
+
+function days(day) {
+  let daysOfWeek = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+
+  let result = "";
+  for (let i = 0; i < daysOfWeek.length; i++) {
+    if (daysOfWeek.indexOf(daysOfWeek[i + 1]) === day) {
+      result += daysOfWeek[i];
+    }
+  }
+  if (day === daysOfWeek.length) {
+    result += daysOfWeek[daysOfWeek.length - 1];
+  }
+  if (day > daysOfWeek.length) {
+    result += "Invalid date";
+  }
+  console.log(result);
+}
+days(3);
