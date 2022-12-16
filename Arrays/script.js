@@ -874,29 +874,42 @@
 //Задача 2 --> Write a program, which receives a number and prints the corresponding name of the day of the week (in English).
 //If the number is NOT a valid day, print: "Invalid day!".
 
-function days(day) {
-  let daysOfWeek = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ];
+// function days(day) {
+//   let daysOfWeek = [
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday",
+//     "Sunday",
+//   ];
 
-  let result = "";
-  for (let i = 0; i < daysOfWeek.length; i++) {
-    if (daysOfWeek.indexOf(daysOfWeek[i + 1]) === day) {
-      result += daysOfWeek[i];
-    }
+//   let result = "";
+//   for (let i = 0; i < daysOfWeek.length; i++) {
+//     if (daysOfWeek.indexOf(daysOfWeek[i + 1]) === day) {
+//       result += daysOfWeek[i];
+//     }
+//   }
+//   if (day === daysOfWeek.length) {
+//     result += daysOfWeek[daysOfWeek.length - 1];
+//   }
+//   if (day > daysOfWeek.length) {
+//     result += "Invalid date";
+//   }
+//   console.log(result);
+// }
+// days(3);
+
+// //Задача 3 -->Write a program, which receives a number n and an array of elements. Your task is to create a new array with n numbers from the original array, reverse it and print its elements on a single line, space-separated.
+
+function reverseArray(counter, nums) {
+  let copyOfArray = nums.slice(0); // създавам копие, защото reverse() директно модифицира оригиналния масив!!!
+  let result = [];
+  for (let i = 0; i < counter; i++) {
+    result.push(copyOfArray[i]);
   }
-  if (day === daysOfWeek.length) {
-    result += daysOfWeek[daysOfWeek.length - 1];
-  }
-  if (day > daysOfWeek.length) {
-    result += "Invalid date";
-  }
-  console.log(result);
+  result.reverse();
+  console.log(result.join(" "));
 }
-days(3);
+reverseArray(3, [10, 20, 30, 40, 50]);
