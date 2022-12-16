@@ -903,13 +903,25 @@
 
 // //Задача 3 -->Write a program, which receives a number n and an array of elements. Your task is to create a new array with n numbers from the original array, reverse it and print its elements on a single line, space-separated.
 
-function reverseArray(counter, nums) {
-  let copyOfArray = nums.slice(0); // създавам копие, защото reverse() директно модифицира оригиналния масив!!!
+// function reverseArray(counter, nums) {
+//   let copyOfArray = nums.slice(0); // създавам копие, защото reverse() директно модифицира оригиналния масив!!!
+//   let result = [];
+//   for (let i = 0; i < counter; i++) {
+//     result.push(copyOfArray[i]);
+//   }
+//   result.reverse();
+//   console.log(result.join(" "));
+// }
+// reverseArray(3, [10, 20, 30, 40, 50]);
+
+// //Задача 4 --> Write a program, which receives an array of strings. Your task is to reverse the array without creating a new array. Print the resulting elements on a single line, space-separated.
+
+function reserveArray(items) {
   let result = [];
-  for (let i = 0; i < counter; i++) {
-    result.push(copyOfArray[i]);
+  for (let i = items.length - 1; i > -1; i--) {
+    result.push(items[i]);
   }
-  result.reverse();
   console.log(result.join(" "));
 }
-reverseArray(3, [10, 20, 30, 40, 50]);
+
+reserveArray(["a", "b", "c", "d", "e"]);
