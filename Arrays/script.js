@@ -844,18 +844,29 @@
 //ЗАДАЧА 28--> Write a JavaScript function to find the longest common starting substring in a set of strings.
 //['go', 'google'] --> output "go";
 
-function longestSubstring(arr) {
-  let index = 0;
-  let element = arr[0];
-  let nextElement = arr[1];
+// function longestSubstring(arr) {
+//   let index = 0;
+//   let element = arr[0];
+//   let nextElement = arr[1];
 
-  while (
-    index < element.length &&
-    element.charAt(index) === nextElement.charAt(index)
-  )
-    index++;
-  {
-    return element.substring(0, index);
-  }
-}
-console.log(longestSubstring(["go", "google"]));
+//   while (
+//     index < element.length &&
+//     element.charAt(index) === nextElement.charAt(index)
+//   )
+//     index++;
+//   {
+//     return element.substring(0, index);
+//   }
+// }
+// console.log(longestSubstring(["go", "google"]));
+
+//----------------------------------------------------------Fundamentals JS SOFTUNI ARRAYS
+//Задача 1 --> Write a function that receives an array of numbers and prints the sum of the first and last element in that array.
+
+// function sumFirstLast(arr) {
+//   let first = Number(arr[0]);
+//   let last = Number(arr[arr.length - 1]);
+//   let result = first + last;
+//   console.log(result);
+// }
+// sumFirstLast([20, 30, 40]);
