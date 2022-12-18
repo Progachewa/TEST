@@ -928,15 +928,37 @@
 
 //Задача 5 --> Write a program, which receives an array of strings, parse them into numbers, and sum only the even numbers..
 
-function sumEvenNumbers(nums) {
-  let result = 0;
+// function sumEvenNumbers(nums) {
+//   let result = 0;
+//   nums.map((num) => {
+//     num = parseInt(num);
+//     if (num % 2 === 0) {
+//       return (result += num);
+//     }
+//   });
+//   console.log(result);
+// }
+
+// sumEvenNumbers(["2", "4", "6", "8", "10"]);
+
+//Задача 6 --> Write a program that calculates the difference between the sum of the even and the sum of the odd numbers in an array.
+
+function differenceSum(nums) {
+  let resultOdd = 0;
+  let resultEven = 0;
+  let difference = 0;
+
   nums.map((num) => {
     num = parseInt(num);
     if (num % 2 === 0) {
-      return (result += num);
+      resultEven += num;
+    }
+    if (num % 2 !== 0) {
+      resultOdd += num;
     }
   });
-  console.log(result);
+  difference = resultEven - resultOdd;
+  console.log(difference);
 }
 
-sumEvenNumbers(["2", "4", "6", "8", "10"]);
+differenceSum([2, 4, 6, 8, 10]);
