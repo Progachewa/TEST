@@ -916,12 +916,27 @@
 
 // //Задача 4 --> Write a program, which receives an array of strings. Your task is to reverse the array without creating a new array. Print the resulting elements on a single line, space-separated.
 
-function reserveArray(items) {
-  let result = [];
-  for (let i = items.length - 1; i > -1; i--) {
-    result.push(items[i]);
-  }
-  console.log(result.join(" "));
+// function reserveArray(items) {
+//   let result = [];
+//   for (let i = items.length - 1; i > -1; i--) {
+//     result.push(items[i]);
+//   }
+//   console.log(result.join(" "));
+// }
+
+// reserveArray(["a", "b", "c", "d", "e"]);
+
+//Задача 5 --> Write a program, which receives an array of strings, parse them into numbers, and sum only the even numbers..
+
+function sumEvenNumbers(nums) {
+  let result = 0;
+  nums.map((num) => {
+    num = parseInt(num);
+    if (num % 2 === 0) {
+      return (result += num);
+    }
+  });
+  console.log(result);
 }
 
-reserveArray(["a", "b", "c", "d", "e"]);
+sumEvenNumbers(["2", "4", "6", "8", "10"]);
