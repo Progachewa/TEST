@@ -943,22 +943,49 @@
 
 //Задача 6 --> Write a program that calculates the difference between the sum of the even and the sum of the odd numbers in an array.
 
-function differenceSum(nums) {
-  let resultOdd = 0;
-  let resultEven = 0;
-  let difference = 0;
+// function differenceSum(nums) {
+//   let resultOdd = 0;
+//   let resultEven = 0;
+//   let difference = 0;
 
-  nums.map((num) => {
-    num = parseInt(num);
-    if (num % 2 === 0) {
-      resultEven += num;
+//   nums.map((num) => {
+//     num = parseInt(num);
+//     if (num % 2 === 0) {
+//       resultEven += num;
+//     }
+//     if (num % 2 !== 0) {
+//       resultOdd += num;
+//     }
+//   });
+//   difference = resultEven - resultOdd;
+//   console.log(difference);
+// }
+
+// differenceSum([2, 4, 6, 8, 10]);
+
+// Задача 7 --> Write a program, which receives two string arrays containing number representations, and prints on the console whether they are identical.
+// Arrays are identical if their elements at same indexes are equal. If they are identical, find the sum of the first array and print the following message:
+// `Arrays are identical. Sum: {sum}`
+//  If the arrays are NOT identical, find the first index where the arrays differ and print the following message:
+//  `Arrays are not identical. Found difference at {index} index`
+
+function identicalArrays(arr1, arr2) {
+  let sum = 0;
+  let result = "";
+
+  for (let i = 0; i < arr1.length; i++) {
+    arr1[i] = parseInt(arr1[i]);
+    arr2[i] = parseInt(arr2[i]);
+    if (arr1[i] !== arr2[i]) {
+      result = `Arrays are not identical. Found difference at ${i} index`;
+      break;
     }
-    if (num % 2 !== 0) {
-      resultOdd += num;
+    if (arr1[i] === arr2[i]) {
+      sum += arr1[i];
+      result = `Arrays are identical. Sum: ${sum}`;
     }
-  });
-  difference = resultEven - resultOdd;
-  console.log(difference);
+  }
+  console.log(result);
 }
 
-differenceSum([2, 4, 6, 8, 10]);
+identicalArrays(["1"], ["10"]);
