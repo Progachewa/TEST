@@ -969,23 +969,41 @@
 //  If the arrays are NOT identical, find the first index where the arrays differ and print the following message:
 //  `Arrays are not identical. Found difference at {index} index`
 
-function identicalArrays(arr1, arr2) {
-  let sum = 0;
-  let result = "";
+// function identicalArrays(arr1, arr2) {
+//   let sum = 0;
+//   let result = "";
 
-  for (let i = 0; i < arr1.length; i++) {
-    arr1[i] = parseInt(arr1[i]);
-    arr2[i] = parseInt(arr2[i]);
-    if (arr1[i] !== arr2[i]) {
-      result = `Arrays are not identical. Found difference at ${i} index`;
-      break;
+//   for (let i = 0; i < arr1.length; i++) {
+//     arr1[i] = parseInt(arr1[i]);
+//     arr2[i] = parseInt(arr2[i]);
+//     if (arr1[i] !== arr2[i]) {
+//       result = `Arrays are not identical. Found difference at ${i} index`;
+//       break;
+//     }
+//     if (arr1[i] === arr2[i]) {
+//       sum += arr1[i];
+//       result = `Arrays are identical. Sum: ${sum}`;
+//     }
+//   }
+//   console.log(result);
+// }
+
+// identicalArrays(["1"], ["10"]);
+
+// ЗАДАЧА 29--> Write a JavaScript function to fill an array with values (numeric, string with one character) on supplied bounds. ('a', "z", 2) -> output ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
+
+function fillArray(start, end, step) {
+  let arr = [];
+
+  if (typeof start === "string" && typeof end === "string") {
+    for (let i = start.charCodeAt(0); i < end.charCodeAt(0); i += step) {
+      arr.push(String.fromCharCode(i));
     }
-    if (arr1[i] === arr2[i]) {
-      sum += arr1[i];
-      result = `Arrays are identical. Sum: ${sum}`;
+  } else if (typeof start === "number" && typeof end === "number") {
+    for (let i = start; i < end; i += step) {
+      arr.push(i);
     }
   }
-  console.log(result);
+  console.log(arr);
 }
-
-identicalArrays(["1"], ["10"]);
+fillArray("a", "z", 2);
