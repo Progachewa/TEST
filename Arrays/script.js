@@ -992,18 +992,132 @@
 
 // ЗАДАЧА 29--> Write a JavaScript function to fill an array with values (numeric, string with one character) on supplied bounds. ('a', "z", 2) -> output ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
 
-function fillArray(start, end, step) {
-  let arr = [];
+// function fillArray(start, end, step) {
+//   let arr = [];
 
-  if (typeof start === "string" && typeof end === "string") {
-    for (let i = start.charCodeAt(0); i < end.charCodeAt(0); i += step) {
-      arr.push(String.fromCharCode(i));
-    }
-  } else if (typeof start === "number" && typeof end === "number") {
-    for (let i = start; i < end; i += step) {
-      arr.push(i);
-    }
-  }
-  console.log(arr);
+//   if (typeof start === "string" && typeof end === "string") {
+//     for (let i = start.charCodeAt(0); i < end.charCodeAt(0); i += step) {
+//       arr.push(String.fromCharCode(i));
+//     }
+//   } else if (typeof start === "number" && typeof end === "number") {
+//     for (let i = start; i < end; i += step) {
+//       arr.push(i);
+//     }
+//   }
+//   console.log(arr);
+// }
+// fillArray("a", "z", 2);
+
+// function addPlayer() {
+//   let newArr = [];
+//   let index = 0;
+//   let display = "";
+//   newArr[index] = document.getElementById("txt").value;
+//   index++;
+//   document.getElementById("txt").value = "";
+
+//   function displayNamePlayer() {
+//     for (let i = 0; i < newArr.length; i++) {
+//       display += `Player name:  ${newArr[i]}`;
+//       document.getElementById("printName").innerHTML = display;
+//     }
+//   }
+//   return displayNamePlayer();
+// }
+
+//-------------- Closure!!!!!!
+// function greet(sayHi) {
+//   return function (name) {
+//     console.log(sayHi + " " + name); // sayHi ще го вземе от горната ф-ция, без значение, че exec.context го няма вече на greet(), защото неговите променливи все още са някъде в паметта !
+//   };
+// }
+
+// let greetVariable = greet("HI"); // създавам променлива, която е равна на резултата от функцията! Тази променлива вече е фунцкия! ( в случая тази променлива е функцията function(name))!
+
+// greetVariable("Pollie"); // Тъй като greetVariable e вече функция, подавам параметри на тази функция!
+
+// function buildFunction() {
+//   let arr = [];
+
+//   for (let i = 0; i < 5; i++) {
+//     arr.push(function () {
+//       console.log(i);
+//     });
+//   }
+//   return arr;
+// }
+// let buildFunc = buildFunction();
+// buildFunc[0]();
+// buildFunc[1]();
+// buildFunc[2]();
+// buildFunc[3]();
+// buildFunc[4]();
+
+// console.log("-------------");
+
+// function blood(points) {
+//   return function () {
+//     if (points >= 100) {
+//       console.log(`You Win.Your points are: ${points}`);
+//     }
+//     if (points < 100) {
+//       console.log(`Sorry!...Your points are: ${points} `);
+//     }
+//   };
+// }
+
+// let victory = blood(120);
+// let loss = blood(80);
+
+// victory();
+// loss();
+
+// let personNames = {
+//   name: "John",
+//   lastName: "Smith",
+//   fullName: function () {
+//     let getNames = this.name + " " + this.lastName;
+//     return getNames;
+//   },
+// };
+
+// let logName = personNames.fullName;
+// console.log(logName());
+
+// let getFullName = logName.bind(personNames);
+// console.log(getFullName());
+
+// console.log("--------------------");
+
+// let getFullNameUser = (function logFullName(name) {
+//   return name; // getFullNameUser има стойност , която е равна на стойността на фунцкията(това ,което връща ф-цията, тоест стринг)
+//   //function getFulllName() {
+//   //console.log(name);
+//   //return name;
+//   //};
+
+//   //getFulllName();
+// })("John");
+// console.log(getFullNameUser);
+
+// let getFullNameUser2 = (function logFullName(name) {
+//   return function getFulllName(lastname) {// от този ред getFullNameUser2 става ф-цуя!
+//     return name + " " + lastname;
+//   };
+// })("John");
+// console.log(getFullNameUser2("Smith"));
+
+//ЗАДАЧА 30 --> Write a JavaScript function to merge two arrays and removes all duplicates elements.
+//var array1 = [1, 2, 3];
+//var array2 = [2, 30, 1];
+//output: [3, 2, 30, 1];
+
+function removeDuplicate(arr1, arr2) {
+  let newArr = arr1.concat(arr2); // [1, 2, 3, 2, 30, 1];
+  let rmvDuplicate = newArr.filter((num, element) => {
+    return newArr.indexOf(num) === element;
+  });
+
+  console.log(rmvDuplicate);
 }
-fillArray("a", "z", 2);
+removeDuplicate([1, 2, 3], [2, 30, 1]);
