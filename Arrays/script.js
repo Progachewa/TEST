@@ -1112,12 +1112,27 @@
 //var array2 = [2, 30, 1];
 //output: [3, 2, 30, 1];
 
-function removeDuplicate(arr1, arr2) {
-  let newArr = arr1.concat(arr2); // [1, 2, 3, 2, 30, 1];
-  let rmvDuplicate = newArr.filter((num, element) => {
-    return newArr.indexOf(num) === element;
-  });
+// function removeDuplicate(arr1, arr2) {
+//   let newArr = arr1.concat(arr2); // [1, 2, 3, 2, 30, 1];
+//   let rmvDuplicate = newArr.filter((num, element) => {
+//     return newArr.indexOf(num) === element;
+//   });
 
-  console.log(rmvDuplicate);
+//   console.log(rmvDuplicate);
+// }
+// removeDuplicate([1, 2, 3], [2, 30, 1]);
+
+//ЗАДАЧА 31 --> Write a JavaScript function to remove a specific element from an array.
+//([2, 5, 9, 6], 5) --> [2, 9, 6];
+
+function removeSpecificElement(elements, specificElement) {
+  let newElements = [];
+  elements.map((el) => {
+    if (el !== specificElement) {
+      newElements.push(el);
+    }
+  });
+  console.log(newElements);
 }
-removeDuplicate([1, 2, 3], [2, 30, 1]);
+
+removeSpecificElement([2, 5, 9, 6], 5);
