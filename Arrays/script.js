@@ -1125,14 +1125,27 @@
 //ЗАДАЧА 31 --> Write a JavaScript function to remove a specific element from an array.
 //([2, 5, 9, 6], 5) --> [2, 9, 6];
 
-function removeSpecificElement(elements, specificElement) {
-  let newElements = [];
-  elements.map((el) => {
-    if (el !== specificElement) {
-      newElements.push(el);
-    }
-  });
-  console.log(newElements);
-}
+// function removeSpecificElement(elements, specificElement) {
+//   let newElements = [];
+//   elements.map((el) => {
+//     if (el !== specificElement) {
+//       newElements.push(el);
+//     }
+//   });
+//   console.log(newElements);
+// }
 
-removeSpecificElement([2, 5, 9, 6], 5);
+// removeSpecificElement([2, 5, 9, 6], 5);
+
+//ЗАДАЧА 32 -->Write a JavaScript function to find an array contains a specific element!
+//arr = [2, 5, 9, 6] --> console.log(contains(arr, 5)); [True];
+
+function findSpecificElement(elements, specificElement) {
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i] === specificElement) {
+      return true;
+    }
+  }
+  return false;
+}
+console.log(findSpecificElement([2, 5, 9, 6], 5));
