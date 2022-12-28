@@ -1179,9 +1179,24 @@
 
 //ЗАДАЧА 35 -->Write a JavaScript function to get a random item from an array.
 
-function getRandomItem(items) {
-  // Въпрос? защо е в масив?
-  let randomNum = items[Math.floor(Math.random() * items.length)];
-  console.log(randomNum);
+// function getRandomItem(items) {
+//  // Въпрос? защо е в масив?
+//   let randomNum = items[Math.floor(Math.random() * items.length)];
+//   console.log(randomNum);
+// }
+// getRandomItem([2, 4, 6, 1, -5, 10, 23, 3]);
+
+//ЗАДАЧА 36 -->Write a JavaScript function to create a specified number of elements with pre-filled numeric value array.
+//console.log(array_filled(6, 0));--> ouput: [0, 0, 0, 0, 0, 0];
+
+function specificNumberOfElements(nums, specificElement) {
+  let num = Number(nums);
+  let specElement = Number(specificElement);
+  let newArr = [];
+
+  for (let i = 0; i < num; i++) {
+    newArr.push(specElement);
+  }
+  console.log(newArr);
 }
-getRandomItem([2, 4, 6, 1, -5, 10, 23, 3]);
+specificNumberOfElements(4, 11);
