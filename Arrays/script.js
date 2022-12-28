@@ -1165,14 +1165,23 @@
 //ЗАДАЧА 34 --> Write a JavaScript function to get nth largest element from an unsorted array.
 //console.log(nthlargest([ 43, 56, 23, 89, 88, 90, 99, 652], 4)); -> output: 89;
 
-function getSpecificLargestElement(elements, specificLength) {
-  let largestElement = 0;
-  for (let i = 0; i < specificLength; i++) {
-    if (elements[i] > largestElement) {
-      largestElement = elements[i];
-    }
-  }
-  console.log(largestElement);
-}
+// function getSpecificLargestElement(elements, specificLength) {
+//   let largestElement = 0;
+//   for (let i = 0; i < specificLength; i++) {
+//     if (elements[i] > largestElement) {
+//       largestElement = elements[i];
+//     }
+//   }
+//   console.log(largestElement);
+// }
 
-getSpecificLargestElement([43, 56, 23, 89, 88, 90, 99, 652], 4);
+// getSpecificLargestElement([43, 56, 23, 89, 88, 90, 99, 652], 4);
+
+//ЗАДАЧА 35 -->Write a JavaScript function to get a random item from an array.
+
+function getRandomItem(items) {
+  // Въпрос? защо е в масив?
+  let randomNum = items[Math.floor(Math.random() * items.length)];
+  console.log(randomNum);
+}
+getRandomItem([2, 4, 6, 1, -5, 10, 23, 3]);
