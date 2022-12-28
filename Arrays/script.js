@@ -1140,12 +1140,24 @@
 //ЗАДАЧА 32 -->Write a JavaScript function to find an array contains a specific element!
 //arr = [2, 5, 9, 6] --> console.log(contains(arr, 5)); [True];
 
-function findSpecificElement(elements, specificElement) {
-  for (let i = 0; i < elements.length; i++) {
-    if (elements[i] === specificElement) {
-      return true;
+// function findSpecificElement(elements, specificElement) {
+//   for (let i = 0; i < elements.length; i++) {
+//     if (elements[i] === specificElement) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// console.log(findSpecificElement([2, 5, 9, 6], 5));
+
+//ЗАДАЧА 33 -->Write a JavaScript script to empty an array keeping the original;
+
+function emptyArray(arr) {
+  let cloneArr = arr.filter((element) => {
+    if (element.length < 0) {
+      return cloneArr.pop();
     }
-  }
-  return false;
+  });
+  console.log(cloneArr);
 }
-console.log(findSpecificElement([2, 5, 9, 6], 5));
+emptyArray([1, 2, 3, 4, 5]);
