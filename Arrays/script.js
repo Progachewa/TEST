@@ -1152,12 +1152,27 @@
 
 //ЗАДАЧА 33 -->Write a JavaScript script to empty an array keeping the original;
 
-function emptyArray(arr) {
-  let cloneArr = arr.filter((element) => {
-    if (element.length < 0) {
-      return cloneArr.pop();
+// function emptyArray(arr) {
+//   let cloneArr = arr.filter((element) => {
+//     if (element.length < 0) {
+//       return cloneArr.pop();
+//     }
+//   });
+//   console.log(cloneArr);
+// }
+// emptyArray([1, 2, 3, 4, 5]);
+
+//ЗАДАЧА 34 --> Write a JavaScript function to get nth largest element from an unsorted array.
+//console.log(nthlargest([ 43, 56, 23, 89, 88, 90, 99, 652], 4)); -> output: 89;
+
+function getSpecificLargestElement(elements, specificLength) {
+  let largestElement = 0;
+  for (let i = 0; i < specificLength; i++) {
+    if (elements[i] > largestElement) {
+      largestElement = elements[i];
     }
-  });
-  console.log(cloneArr);
+  }
+  console.log(largestElement);
 }
-emptyArray([1, 2, 3, 4, 5]);
+
+getSpecificLargestElement([43, 56, 23, 89, 88, 90, 99, 652], 4);
