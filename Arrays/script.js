@@ -1204,14 +1204,26 @@
 //ЗАДАЧА 37 --> Write a JavaScript function to create a specified number of elements with pre-filled string value array.
 //console.log(array_filled(3, 'default value')); output: ["default value", "default value", "default value"]
 
-function specificElementsStrings(numberElements, stringValue) {
-  let numElement = Number(numberElements);
-  let strValue = String(stringValue);
-  let newArr = [];
+// function specificElementsStrings(numberElements, stringValue) {
+//   let numElement = Number(numberElements);
+//   let strValue = String(stringValue);
+//   let newArr = [];
 
-  for (let i = 0; i < numElement; i++) {
-    newArr.push(strValue);
-  }
-  console.log(newArr);
+//   for (let i = 0; i < numElement; i++) {
+//     newArr.push(strValue);
+//   }
+//   console.log(newArr);
+// }
+// specificElementsStrings(3, "default value");
+
+//ЗАДАЧА 38 --> Write a JavaScript function to move an array element from one position to another.
+//console.log(move([10, 20, 30, 40, 50], 0, 2)); output: [20, 30, 10, 40, 50];
+
+function moveElementPosition(elements, position, newPosition) {
+  // добавям [0] за да не се образува нов масив в масива!
+  let moveElement = elements.splice(position, 1)[0];
+  elements.splice(newPosition, 0, moveElement);
+  console.log(elements);
 }
-specificElementsStrings(3, "default value");
+
+moveElementPosition([10, 20, 30, 40, 50], 0, 2);
