@@ -1189,14 +1189,29 @@
 //ЗАДАЧА 36 -->Write a JavaScript function to create a specified number of elements with pre-filled numeric value array.
 //console.log(array_filled(6, 0));--> ouput: [0, 0, 0, 0, 0, 0];
 
-function specificNumberOfElements(nums, specificElement) {
-  let num = Number(nums);
-  let specElement = Number(specificElement);
+// function specificNumberOfElements(nums, specificElement) {
+//   let num = Number(nums);
+//   let specElement = Number(specificElement);
+//   let newArr = [];
+
+//   for (let i = 0; i < num; i++) {
+//     newArr.push(specElement);
+//   }
+//   console.log(newArr);
+// }
+// specificNumberOfElements(4, 11);
+
+//ЗАДАЧА 37 --> Write a JavaScript function to create a specified number of elements with pre-filled string value array.
+//console.log(array_filled(3, 'default value')); output: ["default value", "default value", "default value"]
+
+function specificElementsStrings(numberElements, stringValue) {
+  let numElement = Number(numberElements);
+  let strValue = String(stringValue);
   let newArr = [];
 
-  for (let i = 0; i < num; i++) {
-    newArr.push(specElement);
+  for (let i = 0; i < numElement; i++) {
+    newArr.push(strValue);
   }
   console.log(newArr);
 }
-specificNumberOfElements(4, 11);
+specificElementsStrings(3, "default value");
