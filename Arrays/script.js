@@ -1246,12 +1246,27 @@
 //console.log(array_range(1, 4)); output: [1, 2, 3, 4];
 //console.log(array_range(-6, 4)); output: [-6, -5, -4, -3];
 
-function specLength(startPosition, nums) {
-  let start = Number(startPosition);
-  let numbersToPrint = Number(nums);
+// function specLength(startPosition, nums) {
+//   let start = Number(startPosition);
+//   let numbersToPrint = Number(nums);
 
-  for (let i = 0; i < numbersToPrint; i++) {
-    console.log(start++);
+//   for (let i = 0; i < numbersToPrint; i++) {
+//     console.log(start++);
+//   }
+// }
+// specLength(-6, 4);
+
+//ЗАДАЧА 41 --> Write a JavaScript function to generate an array between two integers of 1 step length.
+//console.log(rangeBetwee(4, 7)); output: [4, 5, 6, 7];
+
+function twoIntegers(startPostion, finalPosition) {
+  let start = parseInt(startPostion);
+  let final = parseInt(finalPosition);
+  let newArr = [];
+
+  for (let i = start; i <= final; i++) {
+    newArr.push(i);
   }
+  console.log(newArr);
 }
-specLength(-6, 4);
+twoIntegers(-4, 7);
