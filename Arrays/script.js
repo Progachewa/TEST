@@ -1259,14 +1259,26 @@
 //ЗАДАЧА 41 --> Write a JavaScript function to generate an array between two integers of 1 step length.
 //console.log(rangeBetwee(4, 7)); output: [4, 5, 6, 7];
 
-function twoIntegers(startPostion, finalPosition) {
-  let start = parseInt(startPostion);
-  let final = parseInt(finalPosition);
-  let newArr = [];
+// function twoIntegers(startPostion, finalPosition) {
+//   let start = parseInt(startPostion);
+//   let final = parseInt(finalPosition);
+//   let newArr = [];
 
-  for (let i = start; i <= final; i++) {
-    newArr.push(i);
-  }
-  console.log(newArr);
-}
-twoIntegers(-4, 7);
+//   for (let i = start; i <= final; i++) {
+//     newArr.push(i);
+//   }
+//   console.log(newArr);
+// }
+// twoIntegers(-4, 7);
+
+//ЗАДАЧА 42 -->Write a JavaScript function to find the unique elements from two arrays.
+//console.log(difference([1, 2, 3], [100, 2, 1, 10])); output: ["1", "2", "3", "10", "100"];
+
+(function (arr1, arr2) {
+  let mergeArrays = arr1.concat(arr2);
+
+  let uniqueElement = mergeArrays.filter((element, item) => {
+    return mergeArrays.indexOf(element) === item;
+  });
+  console.log(uniqueElement);
+})([1, 2, 3], [100, 2, 1, 10]);
