@@ -1230,14 +1230,28 @@
 //ЗАДАЧА 39 --> Write a JavaScript function to filter false, null, 0 and blank values from an array.
 //console.log(filter_array_values([58, '', 'abcd', true, null, false, 0]));output: [58, "abcd", true];
 
-function removeFalse(items) {
-  let newArr = [];
-  items.map((item) => {
-    if (item) {
-      newArr.push(item);
-    }
-  });
-  console.log(newArr);
-}
+// function removeFalse(items) {
+//   let newArr = [];
+//   items.map((item) => {
+//     if (item) {
+//       newArr.push(item);
+//     }
+//   });
+//   console.log(newArr);
+// }
 
-removeFalse([58, "", "abcd", true, null, false, 0]);
+// removeFalse([58, "", "abcd", true, null, false, 0]);
+
+//ЗАДАЧА 40 --> Write a JavaScript function to generate an array of specified length, filled with integer numbers, increase by one from starting position.
+//console.log(array_range(1, 4)); output: [1, 2, 3, 4];
+//console.log(array_range(-6, 4)); output: [-6, -5, -4, -3];
+
+function specLength(startPosition, nums) {
+  let start = Number(startPosition);
+  let numbersToPrint = Number(nums);
+
+  for (let i = 0; i < numbersToPrint; i++) {
+    console.log(start++);
+  }
+}
+specLength(-6, 4);
