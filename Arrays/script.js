@@ -1219,11 +1219,25 @@
 //ЗАДАЧА 38 --> Write a JavaScript function to move an array element from one position to another.
 //console.log(move([10, 20, 30, 40, 50], 0, 2)); output: [20, 30, 10, 40, 50];
 
-function moveElementPosition(elements, position, newPosition) {
-  // добавям [0] за да не се образува нов масив в масива!
-  let moveElement = elements.splice(position, 1)[0];
-  elements.splice(newPosition, 0, moveElement);
-  console.log(elements);
+// function moveElementPosition(elements, position, newPosition) {
+//   let moveElement = elements.splice(position, 1);
+//   elements.splice(newPosition, 0, moveElement);
+//   console.log(elements.flat(1));
+// }
+
+// moveElementPosition([10, 20, 30, 40, 50], 0, 2);
+
+//ЗАДАЧА 39 --> Write a JavaScript function to filter false, null, 0 and blank values from an array.
+//console.log(filter_array_values([58, '', 'abcd', true, null, false, 0]));output: [58, "abcd", true];
+
+function removeFalse(items) {
+  let newArr = [];
+  items.map((item) => {
+    if (item) {
+      newArr.push(item);
+    }
+  });
+  console.log(newArr);
 }
 
-moveElementPosition([10, 20, 30, 40, 50], 0, 2);
+removeFalse([58, "", "abcd", true, null, false, 0]);
