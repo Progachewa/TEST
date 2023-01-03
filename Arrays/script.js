@@ -1112,27 +1112,24 @@
 //var array2 = [2, 30, 1];
 //output: [3, 2, 30, 1];
 
-// function removeDuplicate(arr1, arr2) {
+// (function (arr1, arr2) {
 //   let newArr = arr1.concat(arr2); // [1, 2, 3, 2, 30, 1];
 //   let rmvDuplicate = newArr.filter((num, element) => {
 //     return newArr.indexOf(num) === element;
 //   });
-
 //   console.log(rmvDuplicate);
-// }
-// removeDuplicate([1, 2, 3], [2, 30, 1]);
+// })([1, 2, 3], [2, 30, 1]);
 
 //ЗАДАЧА 31 --> Write a JavaScript function to remove a specific element from an array.
 //([2, 5, 9, 6], 5) --> [2, 9, 6];
 
-// function removeSpecificElement(elements, specificElement) {
-//   let newElements = [];
-//   elements.map((el) => {
-//     if (el !== specificElement) {
-//       newElements.push(el);
+// function removeSpecificElement(nums, specificElement) {
+//   let modifiedNumArray = nums.filter((num) => {
+//     if (num !== specificElement) {
+//       return num;
 //     }
 //   });
-//   console.log(newElements);
+//   console.log(modifiedNumArray);
 // }
 
 // removeSpecificElement([2, 5, 9, 6], 5);
@@ -1141,12 +1138,13 @@
 //arr = [2, 5, 9, 6] --> console.log(contains(arr, 5)); [True];
 
 // function findSpecificElement(elements, specificElement) {
-//   for (let i = 0; i < elements.length; i++) {
-//     if (elements[i] === specificElement) {
-//       return true;
-//     }
-//   }
-//   return false;
+// //let newArray = elements.indexOf(specificElement) !== -1;
+// //   for (let i = 0; i < elements.length; i++) {
+// //     if (elements[i] === specificElement) {
+// //       return true;
+// //     }
+// //   }
+// //   return false;
 // }
 // console.log(findSpecificElement([2, 5, 9, 6], 5));
 
@@ -1175,12 +1173,11 @@
 //   console.log(largestElement);
 // }
 
-// getSpecificLargestElement([43, 56, 23, 89, 88, 90, 99, 652], 4);
+// getSpecificLargestElement([43, 56, 23, 89, 88, 90, 99, 652], 6);
 
 //ЗАДАЧА 35 -->Write a JavaScript function to get a random item from an array.
 
 // function getRandomItem(items) {
-//  // Въпрос? защо е в масив?
 //   let randomNum = items[Math.floor(Math.random() * items.length)];
 //   console.log(randomNum);
 // }
@@ -1220,9 +1217,10 @@
 //console.log(move([10, 20, 30, 40, 50], 0, 2)); output: [20, 30, 10, 40, 50];
 
 // function moveElementPosition(elements, position, newPosition) {
-//   let moveElement = elements.splice(position, 1);
+//   let moveElement = elements.splice(position, 1)[0];
+//   console.log(moveElement);
 //   elements.splice(newPosition, 0, moveElement);
-//   console.log(elements.flat(1));
+//   console.log(elements);
 // }
 
 // moveElementPosition([10, 20, 30, 40, 50], 0, 2);
@@ -1231,30 +1229,29 @@
 //console.log(filter_array_values([58, '', 'abcd', true, null, false, 0]));output: [58, "abcd", true];
 
 // function removeFalse(items) {
-//   let newArr = [];
-//   items.map((item) => {
+//   let newArr = items.filter((item) => {
 //     if (item) {
-//       newArr.push(item);
+//       return item;
 //     }
 //   });
-//   console.log(newArr);
+//   return newArr;
 // }
 
-// removeFalse([58, "", "abcd", true, null, false, 0]);
+// console.log(removeFalse([58, "", "abcd", true, null, false, 0]));
 
 //ЗАДАЧА 40 --> Write a JavaScript function to generate an array of specified length, filled with integer numbers, increase by one from starting position.
 //console.log(array_range(1, 4)); output: [1, 2, 3, 4];
 //console.log(array_range(-6, 4)); output: [-6, -5, -4, -3];
 
-// function specLength(startPosition, nums) {
-//   let start = Number(startPosition);
-//   let numbersToPrint = Number(nums);
+// function specLength(startNum, arrayLength) {
+//   startNum = Number(startNum);
+//   arrayLength = Number(arrayLength);
 
-//   for (let i = 0; i < numbersToPrint; i++) {
-//     console.log(start++);
+//   for (let i = 0; i < arrayLength; i++) {
+//     console.log(startNum++);
 //   }
 // }
-// specLength(-6, 4);
+// specLength("-6", "4");
 
 //ЗАДАЧА 41 --> Write a JavaScript function to generate an array between two integers of 1 step length.
 //console.log(rangeBetwee(4, 7)); output: [4, 5, 6, 7];
@@ -1274,11 +1271,39 @@
 //ЗАДАЧА 42 -->Write a JavaScript function to find the unique elements from two arrays.
 //console.log(difference([1, 2, 3], [100, 2, 1, 10])); output: ["1", "2", "3", "10", "100"];
 
-(function (arr1, arr2) {
-  let mergeArrays = arr1.concat(arr2);
+// (function (arr1, arr2) {
+//   let mergeArrays = arr1.concat(arr2);
 
-  let uniqueElement = mergeArrays.filter((element, item) => {
-    return mergeArrays.indexOf(element) === item;
-  });
-  console.log(uniqueElement);
-})([1, 2, 3], [100, 2, 1, 10]);
+//   let uniqueElement = mergeArrays.filter((element, item) => {
+//     return mergeArrays.indexOf(element) === item;
+//   });
+//   console.log(uniqueElement);
+// })([1, 2, 3], [100, 2, 1, 10]);
+
+//ЗАДАЧА 43 -->Write a JavaScript function to create an array of arrays, ungrouping the elements in an array produced by zip.
+//unzip[['a', 1, true], ['b', 2, false]] --> [["a","b"],[1,2],[true,false]];
+
+function zipArray(groupingArray) {
+  let mergeArray = groupingArray.flat(1);
+  let stringArray = [];
+  let numberArray = [];
+  let booleanArray = [];
+  let newGroupingArray = [];
+  for (let i = 0; i < mergeArray.length; i++) {
+    if (typeof mergeArray[i] === "string") {
+      stringArray.push(mergeArray[i]);
+    } else if (typeof mergeArray[i] === "number") {
+      numberArray.push(mergeArray[i]);
+    } else if (typeof mergeArray[i] === "boolean") {
+      booleanArray.push(mergeArray[i]);
+    }
+  }
+  newGroupingArray.push(stringArray, numberArray, booleanArray);
+  return newGroupingArray;
+}
+console.log(
+  zipArray([
+    ["a", 1, true],
+    ["b", 2, false],
+  ])
+);
